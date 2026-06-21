@@ -1,0 +1,114 @@
+Continent,Country,City,Latitude,Longitude,ManMadeLandmarks,GeographicalLandmarks,InterestingFact,Clue (from Blooket)
+Europe,United Kingdom,London,51.51,-0.13,"Big Ben, Tower Bridge, Buckingham Palace",River Thames,Capital of the UK; the Prime Minister lives at 10 Downing Street,"The River Thames winds past the Houses of Parliament and the Tower of London in which capital city, home to Big Ben and Buckingham Palace?"
+Europe,United Kingdom,Edinburgh,55.95,-3.19,Edinburgh Castle,Arthur's Seat (extinct volcano),Capital of Scotland,"An extinct volcano known as Arthur's Seat overlooks which Scottish capital, famous for the castle on its crag?"
+Europe,France,Paris,48.86,2.35,"Eiffel Tower, Louvre, Notre-Dame",Seine River,The Louvre holds the Mona Lisa; capital of France,"The glass pyramid of the Louvre, guarding the Mona Lisa, stands by the Seine in which capital crowned by the Eiffel Tower?"
+Europe,France,Marseille,43.3,5.37,Old Port (Vieux-Port),Mediterranean Sea,France's oldest and biggest port city,"France's oldest port city, on the Mediterranean, is which city?"
+Europe,Italy,Rome,41.9,12.5,"Colosseum, Pantheon","Tiber River, Seven Hills","Vatican City, the world's smallest country, sits inside Rome","Vatican City, the world's smallest country, lies entirely inside which capital built on seven hills and home to the Colosseum?"
+Europe,Italy,Venice,45.44,12.32,St. Mark's Basilica,Venetian Lagoon (Adriatic Sea),A city built on water where people travel by boat,A lagoon city of canals where people travel by boat is which city?
+Europe,Italy,Pisa,43.72,10.4,Leaning Tower of Pisa,Arno River,The tower leans because of soft ground,A famous bell tower that tilts because it was built on soft ground stands in which Tuscan city on the Arno River?
+Europe,Germany,Berlin,52.52,13.4,"Brandenburg Gate, Berlin Wall remains",Spree River,Capital of Germany; the Wall once split the city,The Brandenburg Gate and remains of a wall that once split the city are found in which German capital on the Spree River?
+Europe,Germany,Munich,48.14,11.58,Neuschwanstein Castle (nearby),Bavarian Alps,Famous for Oktoberfest,Oktoberfest and nearby Neuschwanstein Castle belong to which Bavarian city?
+Europe,Spain,Madrid,40.42,-3.7,"Royal Palace, Prado Museum",Manzanares River,Capital of Spain,The Prado Museum and the Royal Palace sit in which Spanish capital on the Manzanares River?
+Europe,Spain,Barcelona,41.39,2.17,Sagrada Família,Mediterranean Sea coast,The cathedral has been built for over 140 years,Gaudi's Sagrada Familia church rises in which Spanish city?
+Europe,Portugal,Lisbon,38.72,-9.13,Belém Tower,"Tagus River, Atlantic Ocean",Capital of Portugal; a great age-of-exploration port,The Belem Tower guards the Tagus in which Portuguese capital?
+Europe,Greece,Athens,37.98,23.73,Parthenon (Acropolis),"Aegean Sea, Mt. Lycabettus",Birthplace of democracy and the Olympic Games,The Parthenon crowns the Acropolis in which Greek capital?
+Europe,Netherlands,Amsterdam,52.37,4.9,"Canal houses, windmills",Canals (below sea level),Much of the country is below sea level,Canals and windmills fill which Dutch capital below sea level?
+Europe,Russia,Moscow,55.76,37.62,"Kremlin, St. Basil's Cathedral, Red Square",Moskva River,Capital of the largest country in the world,St. Basil's Cathedral and the Kremlin sit on Red Square in which capital?
+Europe,Russia,St. Petersburg,59.93,30.34,"Hermitage Museum, Winter Palace",Neva River,Built by Tsar Peter the Great,"Built by Tsar Peter the Great on the Neva River, which Russian city holds the Hermitage and the Winter Palace?"
+Europe,Austria,Vienna,48.21,16.37,Schönbrunn Palace,Danube River,Capital of Austria; the 'City of Music',Schonbrunn Palace and classical music belong to which Austrian capital?
+Europe,Switzerland,Zermatt,46.02,7.75,Old City of Bern,"Matterhorn, Swiss Alps",The Matterhorn is a famous pyramid-shaped peak,The pyramid-shaped Matterhorn rises above which Swiss alpine town?
+Europe,Ireland,Dublin,53.35,-6.26,"Trinity College, Dublin Castle",River Liffey,Capital of Ireland,Trinity College sits on the Liffey in which Irish capital?
+Europe,Belgium,Brussels,50.85,4.35,"Atomium, Grand Place",,Headquarters of the European Union,The Atomium and the EU's headquarters are in which Belgian capital?
+Europe,Norway,Oslo,59.91,10.75,Viking Ship Museum,"Fjords, Oslofjord",Norway is famous for deep coastal fjords,Fjords and a Viking Ship Museum belong to which Norwegian capital?
+Europe,Sweden,Stockholm,59.33,18.07,Royal Palace,Baltic Sea archipelago,Built across 14 islands,"Spread across 14 islands, which Swedish capital is this?"
+Europe,Poland,Warsaw,52.23,21.01,Royal Castle,Vistula River,Capital of Poland,The rebuilt Royal Castle stands on the Vistula in which Polish capital?
+Europe,Czech Republic,Prague,50.08,14.44,"Charles Bridge, Prague Castle",Vltava River,Prague Castle is one of the largest castles on Earth,Charles Bridge and a huge castle overlook the Vltava in which capital?
+Europe,Hungary,Budapest,47.5,19.04,Hungarian Parliament Building,Danube River,"Two cities, Buda and Pest, joined by the Danube",Buda and Pest meet across the Danube in which Hungarian capital?
+Europe,Vatican City,Vatican City,41.9,12.45,"St. Peter's Basilica, Sistine Chapel",,The smallest country in the world,"The Sistine Chapel and St. Peter's Basilica belong to which walled country, the smallest in the world, inside Rome?"
+Europe,Denmark,Copenhagen,55.68,12.57,"The Little Mermaid statue, Tivoli Gardens",Øresund Strait,Connected to Sweden by a bridge-tunnel,The Little Mermaid statue and Tivoli Gardens sit in which Danish capital?
+Europe,Finland,Helsinki,60.17,24.94,Helsinki Cathedral,"Baltic Sea, thousands of lakes",Called the 'Land of a Thousand Lakes',The 'Land of a Thousand Lakes' has which Baltic capital?
+Europe,Romania,Bucharest,44.43,26.1,Palace of the Parliament,"Carpathian Mountains, Transylvania",Has one of the world's largest buildings,The vast Palace of the Parliament stands in which Romanian capital?
+Europe,Bulgaria,Sofia,42.7,23.32,Alexander Nevsky Cathedral,Balkan Mountains,One of Europe's oldest cities,The gold-domed Alexander Nevsky Cathedral rises in which Bulgarian capital?
+Europe,Ukraine,Kyiv,50.45,30.52,Saint Sophia Cathedral,Dnieper River,Largest country entirely within Europe,Saint Sophia Cathedral overlooks the Dnieper in which Ukrainian capital?
+Asia,India,New Delhi,28.61,77.21,"India Gate, Red Fort, Qutub Minar",Yamuna River,Capital of India,India Gate and the Red Fort stand in which Indian capital?
+Asia,India,Agra,27.18,78.04,Taj Mahal,Yamuna River,A white-marble tomb; one of the New 7 Wonders,"The white-marble Taj Mahal, built as a tomb beside the Yamuna River, draws visitors to which Indian city?"
+Asia,India,Mumbai,19.08,72.88,Gateway of India,Arabian Sea,India's largest city and film capital (Bollywood),"The Gateway of India arch faces the Arabian Sea in which Indian city, home of the Bollywood film industry?"
+Asia,China,Beijing,39.9,116.41,"Great Wall (nearby), Forbidden City",,Capital of China; the Great Wall is thousands of miles long,The Forbidden City and the nearby Great Wall belong to which capital?
+Asia,China,Shanghai,31.23,121.47,Oriental Pearl Tower,Yangtze & Huangpu Rivers,The Yangtze is Asia's longest river,The Oriental Pearl Tower rises where the Huangpu meets the Yangtze in which huge Chinese port city?
+Asia,China,Xi'an,34.27,108.95,Terracotta Army,Yellow River region,Thousands of clay soldiers guard an ancient emperor's tomb,An underground army of thousands of clay soldiers guards an emperor's tomb near which ancient Chinese city?
+Asia,Japan,Tokyo,35.68,139.69,"Tokyo Skytree, Tokyo Tower",Mt. Fuji (nearby),Capital of Japan; Mt. Fuji is its tallest peak,The Skytree rises near Mount Fuji in which Japanese capital?
+Asia,Japan,Kyoto,35.01,135.77,"Kinkaku-ji (Golden Pavilion), Fushimi Inari",,"Japan's old capital, full of temples",The Golden Pavilion and thousands of red torii gates at Fushimi Inari are found in which former capital of Japan?
+Asia,Nepal,Kathmandu,27.72,85.32,Boudhanath Stupa,"Himalayas, Mt. Everest (nearby)","Gateway to Everest, the world's tallest mountain (29,032 ft)",The gateway to Mount Everest is which Nepalese capital?
+Asia,Thailand,Bangkok,13.76,100.5,"Grand Palace, Wat Arun",Chao Phraya River,Famous for floating markets,The Grand Palace and floating markets belong to which Thai capital?
+Asia,United Arab Emirates,Dubai,25.2,55.27,Burj Khalifa,"Arabian Desert, Persian Gulf",Burj Khalifa is the world's tallest building,"The Burj Khalifa, the tallest building on Earth, rises in which city?"
+Asia,Jordan,Petra,30.33,35.44,The Treasury (carved city),Desert canyons,An ancient city carved into rose-colored rock,A rose-red city carved into desert cliffs is which Jordanian site?
+Asia,Israel,Jerusalem,31.77,35.21,"Western Wall, Dome of the Rock",Dead Sea (nearby),The Dead Sea is the lowest point on land on Earth,The Western Wall and Dome of the Rock stand in which holy city?
+Asia,Turkey,Istanbul,41.01,28.98,"Hagia Sophia, Blue Mosque",Bosphorus Strait,The only city on two continents — Europe and Asia,"Spanning the Bosphorus across both Europe and Asia, which Turkish city holds the Hagia Sophia and the Blue Mosque?"
+Asia,Saudi Arabia,Mecca,21.42,39.83,Great Mosque (Kaaba),Arabian Desert,Mecca is Islam's holiest city,"Islam's holiest city, in the Saudi desert, is which city?"
+Asia,Indonesia,Yogyakarta,-7.8,110.36,Borobudur Temple,Ring of Fire volcanoes,"Indonesia has more islands than any country (~17,000)",The giant Borobudur temple rises near which Indonesian city?
+Asia,Cambodia,Siem Reap,13.36,103.86,Angkor Wat,Tonlé Sap lake,Angkor Wat is the largest religious monument in the world,"Angkor Wat, the world's largest temple, lies by which Cambodian town?"
+Asia,South Korea,Seoul,37.57,126.98,"Gyeongbokgung Palace, N Seoul Tower",Han River,Capital of South Korea,Gyeongbokgung Palace and the N Seoul Tower belong to which capital?
+Asia,Vietnam,Ha Long Bay,20.91,107.18,,Ha Long Bay,Ha Long Bay has thousands of limestone islands,Thousands of limestone islands rise from which Vietnamese bay?
+Asia,Singapore,Singapore,1.35,103.82,"Marina Bay Sands, Merlion",,A city that is also its own country (city-state),"A city that is also its own country, with the Marina Bay Sands and a lion-fish Merlion statue, is called what?"
+Asia,Pakistan,Lahore,31.55,74.34,Badshahi Mosque,Indus River,The Indus River gave its name to India,The Badshahi Mosque stands in which Pakistani city?
+Asia,Sri Lanka,Kandy,7.29,80.64,Temple of the Tooth,Indian Ocean,An island country shaped like a teardrop,The Temple of the Tooth sits in which Sri Lankan hill city?
+Asia,Iran,Tehran,35.69,51.39,Azadi Tower,"Mount Damavand, Caspian Sea",Damavand is the highest peak in the Middle East,Mount Damavand rises near which Iranian capital?
+Africa,Egypt,Cairo,30.04,31.24,"Pyramids of Giza, Great Sphinx","Nile River, Sahara Desert",The Nile is the longest river in the world,The Pyramids of Giza sit beside the Nile near which capital?
+Africa,Egypt,Alexandria,31.2,29.92,Site of the ancient Lighthouse,Mediterranean Sea,Once had a Wonder of the Ancient World,"Once home to a great lighthouse that was a Wonder of the Ancient World, which Egyptian port city sits on the Mediterranean?"
+Africa,South Africa,Cape Town,-33.92,18.42,,"Table Mountain, Cape of Good Hope",A flat-topped mountain overlooks the city,Flat-topped Table Mountain overlooks which South African city?
+Africa,South Africa,Johannesburg,-26.2,28.05,Union Buildings,Highveld plateau,Built on the world's richest gold deposits,"Built on the world's richest gold deposits, which large South African city sits on the high Highveld plateau?"
+Africa,Morocco,Marrakesh,31.63,-7.99,Koutoubia Mosque,"Atlas Mountains, Sahara Desert",A gateway city to the Sahara,A gateway to the Sahara below the Atlas Mountains is which Moroccan city?
+Africa,Morocco,Casablanca,33.57,-7.59,Hassan II Mosque,Atlantic Ocean,Has one of the world's tallest minarets,The towering Hassan II Mosque rises over the Atlantic Ocean in which Moroccan city?
+Africa,Kenya,Nairobi,-1.29,36.82,,"Great Rift Valley, Nairobi Nat'l Park",A safari park sits right next to the city,A safari park sits beside which Kenyan capital in the Rift Valley?
+Africa,Tanzania,Arusha,-3.39,36.68,,"Mt. Kilimanjaro, Serengeti",Kilimanjaro is Africa's tallest mountain,The gateway to Kilimanjaro and the Serengeti is which Tanzanian city?
+Africa,Zambia/Zimbabwe,Victoria Falls,-17.92,25.86,,"Victoria Falls, Zambezi River",One of the largest waterfalls in the world,A giant waterfall on the Zambezi thunders at which town?
+Africa,Nigeria,Lagos,6.52,3.38,,"Niger River, Gulf of Guinea",Nigeria is Africa's most populated country,"Nigeria's biggest city, on the Gulf of Guinea, is which city?"
+Africa,Ethiopia,Addis Ababa,9.03,38.74,,Ethiopian Highlands,One of the highest capital cities in the world,One of the highest capital cities is which Ethiopian city?
+Africa,Mali,Timbuktu,16.77,-3.01,Ancient mud mosques,"Sahara Desert, Niger River",A famous historic desert trading city,A fabled desert trading town with mud mosques is which Malian city?
+Africa,Democratic Rep. of Congo,Kinshasa,-4.32,15.31,,"Congo River, Congo Rainforest",The Congo is the world's deepest river,"On the world's deepest river, which Congolese capital is this?"
+Africa,Senegal,Dakar,14.72,-17.47,,Atlantic Ocean (westernmost Africa),The westernmost point of mainland Africa,The westernmost city of mainland Africa is which Senegalese capital?
+Africa,Madagascar,Antananarivo,-18.88,47.51,,"Indian Ocean island, baobab trees",Home to lemurs found nowhere else,The capital of the lemur island of Madagascar is which city?
+North America,United States,"Washington, D.C.",38.91,-77.04,"White House, Capitol, Washington Monument",Potomac River,Capital of the United States,"The White House, the Capitol, and the Washington Monument stand on the Potomac River in which U.S. capital city?"
+North America,United States,New York City,40.71,-74.01,"Statue of Liberty, Empire State Building",Hudson River,The statue was a gift from France,"The Statue of Liberty, a gift from France, welcomes ships into the harbor of which U.S. city on the Hudson River?"
+North America,United States,San Francisco,37.77,-122.42,Golden Gate Bridge,"San Francisco Bay, Pacific Ocean",The bridge is painted 'international orange',The orange Golden Gate Bridge spans the bay of which California city?
+North America,United States,Los Angeles,34.05,-118.24,Hollywood Sign,"Pacific Ocean, San Andreas Fault",Center of the U.S. movie industry,The Hollywood Sign overlooks which California city?
+North America,United States,Grand Canyon,36.1,-112.11,Hoover Dam (nearby),"Grand Canyon, Colorado River",The Grand Canyon was carved by the Colorado River,A mile-deep gorge carved by the Colorado River is which landmark?
+North America,United States,Orlando,28.54,-81.38,Walt Disney World,Florida wetlands (Everglades nearby),Florida's Everglades is a huge wetland,Walt Disney World and the nearby Everglades wetlands draw visitors to which Florida city?
+North America,Canada,Ottawa,45.42,-75.7,Parliament Hill,Ottawa River,Capital of Canada,Parliament Hill sits on a river in which Canadian capital?
+North America,Canada,Toronto,43.65,-79.38,CN Tower,Lake Ontario,One of the five Great Lakes,The CN Tower rises beside Lake Ontario in which Canadian city?
+North America,Canada,Niagara Falls,43.08,-79.07,,"Niagara Falls, Niagara River",Falls shared by Canada and the U.S.,A famous waterfall shared by the U.S. and Canada is which falls?
+North America,Canada,Vancouver,49.28,-123.12,Capilano Suspension Bridge,"Pacific Ocean, Coast Mountains",Surrounded by mountains and ocean,"Ringed by the Coast Mountains and the Pacific Ocean, which Canadian city has the Capilano Suspension Bridge?"
+North America,Mexico,Mexico City,19.43,-99.13,"Templo Mayor, Metropolitan Cathedral",Valley of Mexico (high plateau),Built on the site of the Aztec capital,"Built on the ruins of the Aztec capital, which capital city is this?"
+North America,Mexico,Cancun,21.16,-86.85,Chichén Itzá (nearby),"Yucatán Peninsula, Caribbean Sea",Chichén Itzá is a New 7 Wonder Maya pyramid,"Near the Maya pyramid of Chichen Itza, which Mexican beach city is this?"
+North America,Cuba,Havana,23.11,-82.37,El Morro Fortress,Caribbean Sea,An island nation south of Florida,El Morro fortress guards the harbor of which Cuban capital?
+North America,Panama,Panama City,8.98,-79.52,Panama Canal,Isthmus of Panama,The canal links the Atlantic and Pacific Oceans,A famous ocean-linking canal runs by which capital?
+North America,Guatemala,Tikal,17.22,-89.62,Tikal pyramids,"Volcanoes, rainforest",Ancient Maya temples rise above the jungle,Maya temples rise above the jungle at which Guatemalan site?
+North America,Jamaica,Kingston,17.97,-76.79,,"Blue Mountains, Caribbean Sea",Famous for Blue Mountain coffee,"Famous for Blue Mountain coffee, which Jamaican capital is this?"
+North America,Haiti / Dom. Rep.,Santo Domingo,18.49,-69.93,Citadelle Laferrière,Island of Hispaniola,Two countries share one island,"Sharing Hispaniola with Haiti, which Dominican capital is this?"
+South America,Brazil,Rio de Janeiro,-22.91,-43.17,Christ the Redeemer,"Sugarloaf Mountain, Atlantic coast",The statue stands on Corcovado mountain,Christ the Redeemer looks down on which Brazilian city?
+South America,Brazil,Brasilia,-15.79,-47.88,Modernist government buildings,Central plateau,A planned capital built in the shape of an airplane,A planned capital shaped like an airplane is which city?
+South America,Brazil,Manaus,-3.12,-60.02,Amazon Theatre (opera house),Amazon River & Rainforest,Deep in the world's largest rainforest,"Deep in the Amazon rainforest, a grand opera house called the Amazon Theatre stands in which Brazilian river city?"
+South America,Peru,Lima,-12.05,-77.04,Plaza Mayor,"Pacific Ocean, coastal desert",Capital of Peru,"On a desert Pacific coast, which Peruvian capital is this?"
+South America,Peru,Machu Picchu,-13.16,-72.55,Machu Picchu ruins,"Andes Mountains, Urubamba River",An ancient Inca city high in the Andes,An ancient Inca city high in the Andes is which site?
+South America,Argentina,Buenos Aires,-34.6,-58.38,"Obelisco, Casa Rosada",Río de la Plata,The tango dance was born here,The birthplace of tango is which Argentine capital?
+South America,Argentina/Brazil,Iguazu Falls,-25.69,-54.44,,Iguazú Falls,A giant waterfall shared by two countries,Giant waterfalls shared by Argentina and Brazil are which falls?
+South America,Chile,Santiago,-33.45,-70.67,,"Andes Mountains, Atacama Desert",The Atacama is the driest desert on Earth,"Below the Andes near the Atacama, which Chilean capital is this?"
+South America,Bolivia,Uyuni,-20.13,-67.49,,"Andes, Salar de Uyuni salt flat",Uyuni is the world's largest salt flat; La Paz is super high up,The world's largest salt flat shines white at which Bolivian site?
+South America,Colombia,Bogota,4.71,-74.07,Gold Museum,Andes Mountains,"Capital of Colombia, high in the Andes","High in the Andes, which Colombian capital holds the Gold Museum?"
+South America,Ecuador,Quito,-0.18,-78.47,,"Andes Mountains, the Equator",Sits almost exactly on the Equator,"Sitting almost on the Equator, which Ecuadorian capital is this?"
+South America,Ecuador,Galapagos Islands,-0.95,-90.97,,"Volcanic islands, Pacific Ocean",Where Charles Darwin studied evolution,"Where Darwin studied wildlife, which Ecuadorian islands are these?"
+South America,Venezuela,Angel Falls,5.97,-62.54,,Angel Falls,Angel Falls is the world's tallest waterfall,The tallest waterfall on Earth plunges at which Venezuelan site?
+South America,Uruguay,Montevideo,-34.9,-56.16,,"Río de la Plata, Atlantic Ocean",Capital of Uruguay,"Where the Rio de la Plata meets the sea, which Uruguayan capital is this?"
+Oceania,Australia,Canberra,-35.28,149.13,Parliament House,Lake Burley Griffin,Capital of Australia (not Sydney!),Australia's purpose-built capital is which city?
+Oceania,Australia,Sydney,-33.87,151.21,"Sydney Opera House, Harbour Bridge","Sydney Harbour, Pacific Ocean",The Opera House roof looks like sails,A famous opera house with a roof like white sails sits on the harbor of which Australian city?
+Oceania,Australia,Melbourne,-37.81,144.96,"Melbourne Cricket Ground (MCG), Flinders St Station",Yarra River,Australia's sporting capital; often rated most liveable city,"Home to the giant MCG cricket ground and often called the most liveable city, which Australian city sits on the Yarra River?"
+Oceania,Australia,Brisbane,-27.47,153.03,Story Bridge,Brisbane River,Capital of Queensland; gateway to the Gold Coast,"The Story Bridge crosses the Brisbane River in which Australian city, capital of Queensland?"
+Oceania,Australia,Perth,-31.95,115.86,"Kings Park, Bell Tower","Swan River, Indian Ocean",One of the most isolated big cities in the world,"One of the most isolated big cities on Earth, on the Swan River by the Indian Ocean, is which Australian city?"
+Oceania,Australia,Adelaide,-34.93,138.6,Adelaide Oval,"Mount Lofty, Torrens River",Known as the 'City of Churches'; near the Barossa wine region,"Known as the 'City of Churches' and near the Barossa wine region, which South Australian city holds the Adelaide Oval?"
+Oceania,Australia,Cairns,-16.92,145.77,,Great Barrier Reef,The world's largest coral reef system,"The gateway to the Great Barrier Reef, the world's largest coral reef, is which Australian city?"
+Oceania,Australia,Alice Springs,-23.7,133.88,,"Uluru (Ayers Rock), the Outback",A giant red rock sacred to Aboriginal people,The giant red rock Uluru rises from the Outback near which central Australian town?
+Oceania,New Zealand,Wellington,-41.29,174.78,Te Papa Museum,Cook Strait,Capital of New Zealand,"On the windy Cook Strait, which New Zealand capital is this?"
+Oceania,New Zealand,Auckland,-36.85,174.76,Sky Tower,"Pacific Ocean, volcanoes",Built on top of dozens of volcanoes,"Built on top of dozens of volcanoes, which New Zealand city has the Sky Tower?"
+Oceania,New Zealand,Queenstown,-45.03,168.66,,"Southern Alps, Lake Wakatipu",Surrounded by mountains called 'The Remarkables',"Beside Lake Wakatipu and ringed by mountains called 'The Remarkables,' which New Zealand town loves adventure sports?"
+Oceania,Fiji,Suva,-18.14,178.44,,"Coral reefs, Pacific Ocean",A nation made of more than 300 islands,The capital of the 300-island nation of Fiji is which city?
+Oceania,Papua New Guinea,Port Moresby,-9.44,147.18,,"Highlands, rainforest",One of the most culturally diverse countries on Earth,The capital of Papua New Guinea is which city?

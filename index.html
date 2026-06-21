@@ -43,7 +43,8 @@
   .toast.show{opacity:1}
   .hintbar{margin:8px 12px 0;background:#eef4fb;border:1px solid #dce7f2;border-radius:12px;padding:9px 12px;font-size:13px;color:#33506e;line-height:1.5}
   .hintbar b{color:#12304e}
-  .info{position:absolute;display:none;width:320px;max-width:92vw;max-height:74vh;overflow:auto;background:#fff;border:1px solid #cdd9e6;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.20);padding:10px 12px;font-size:12.5px;line-height:1.5;color:#33506e;z-index:6}
+  .info{position:absolute;display:none;top:8px;right:8px;width:300px;max-width:46%;max-height:calc(100% - 16px);overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;background:#fff;border:1px solid #cdd9e6;border-radius:10px;box-shadow:0 8px 22px rgba(0,0,0,.28);padding:10px 12px;font-size:12.5px;line-height:1.5;color:#33506e;z-index:6}
+  @media (max-width:560px){.info{top:auto;bottom:8px;left:8px;right:8px;width:auto;max-width:none;max-height:48%}}
   .info .it{font-weight:700;color:#12304e;font-size:15px;margin-bottom:4px}
   .info b{color:#12304e}
   .caro{margin:6px 0}
@@ -51,11 +52,12 @@
   .caroimg{width:100%;height:100%;object-fit:cover;display:block}
   .carostatus{font-size:12px;color:#8a98a8}
   .carocap{font-size:11px;color:#5b7088;margin-top:4px;line-height:1.35;max-height:46px;overflow:hidden}
+  .carodesc{font-size:12px;color:#37506b;margin-top:6px;line-height:1.45;border-top:1px solid #eef1f5;padding-top:6px}
   .cbtn{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:none;border-radius:50%;background:rgba(18,48,78,.62);color:#fff;font-size:17px;cursor:pointer}
   .cprev{left:6px}.cnext{right:6px}
   .ccount{position:absolute;bottom:6px;right:8px;background:rgba(0,0,0,.5);color:#fff;font-size:11px;padding:1px 6px;border-radius:10px}
   .wl{color:#1f6fd6;text-decoration:underline;cursor:pointer}
-  #wikitip{position:fixed;display:none;max-width:260px;background:#fff;border:1px solid #cdd9e6;border-radius:10px;box-shadow:0 8px 22px rgba(0,0,0,.25);padding:8px 10px;z-index:50;font-size:12px;color:#33506e;pointer-events:none}
+  #wikitip{position:fixed;display:none;width:250px;max-height:240px;overflow:auto;background:#fff;border:1px solid #cdd9e6;border-radius:10px;box-shadow:0 8px 22px rgba(0,0,0,.25);padding:8px 10px;z-index:50;font-size:12px;color:#33506e;pointer-events:auto}
   #wikitip img{width:100%;max-height:120px;object-fit:cover;border-radius:6px;margin-bottom:6px}
   #wikitip .wt{font-weight:700;color:#12304e;margin-bottom:2px}
   .navrow{display:flex;align-items:center;gap:10px;padding:8px 12px 0}
@@ -161,6 +163,10 @@ $('playBtn').onclick=()=>{prep();startGame();};
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];}return a;}
 function rFor(sv){const w=parseFloat((sv.getAttribute('viewBox')||'0 0 1000 500').split(' ')[2]);return w*PINK;}
 function sizePins(){const rg=rFor($('map')),rl=rFor($('lmap'));round.forEach(it=>{if(it._pins){it._pins.setAttribute('r',rg);it._hpins.setAttribute('r',rg*2.4);}if(it._lpins){it._lpins.setAttribute('r',rl);it._hlpins.setAttribute('r',rl*2.4);}});}
+function focusVB(base,it){const narrow=window.innerWidth<=560;const fx=narrow?0.5:0.26,fy=narrow?0.30:0.45;const w=base[2],h=base[3];let x=it.x-fx*w,y=it.y-fy*h;x=Math.max(-60,Math.min(1060-w,x));y=Math.max(-40,Math.min(540-h,y));return [x,y,w,h];}
+function gameFocus(it){const base=(autoFocus?(VIEWS[it.c]||VIEWS.World):baseVB);vb=focusVB(base,it);setVB();}
+let lvb=null,lbaseVB=null;
+function setLVB(){$('lmap').setAttribute('viewBox',lvb.map(v=>v.toFixed(1)).join(' '));sizePins();}
 
 function prep(){
   if(dataset==='World'){round=GAMES.World[level].filter(i=>region==='All'||i.c===region).map(o=>Object.assign({},o));baseVB=(VIEWS[region]||VIEWS.World).slice();autoFocus=(region==='All');$('ttl').textContent='Landmarks by City (World) - '+level+' - '+region;}
@@ -178,12 +184,8 @@ function makePins(gid,clickable){
 }
 
 /* ---------- INFO BOX + WIKI PREVIEW ---------- */
-const photoCache={};let jsonpId=0;
-function jsonp(url){return new Promise((res,rej)=>{const cb='__cb'+(jsonpId++);const s=document.createElement('script');let done=false;
-  window[cb]=d=>{done=true;res(d);try{delete window[cb];}catch(e){window[cb]=undefined;}s.remove();};
-  s.onerror=()=>{if(!done)rej();try{delete window[cb];}catch(e){}s.remove();};
-  s.src=url+'&callback='+cb;document.body.appendChild(s);
-  setTimeout(()=>{if(!done){rej();s.remove();}},9000);});}
+const photoCache={};
+function jsonp(url){return fetch(url+'&origin=*').then(r=>{if(!r.ok)throw 0;return r.json();});}
 function capFor(p,t){let cap='';const ii=p&&p.imageinfo&&p.imageinfo[0];const md=ii&&ii.extmetadata;
   if(md&&md.ImageDescription&&md.ImageDescription.value)cap=md.ImageDescription.value.replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
   if(!cap)cap=t.replace(/^File:/i,'').replace(/\.[a-z0-9]+$/i,'').replace(/_/g,' ').trim();
@@ -203,11 +205,24 @@ function fetchPhotos(title){
     });
   }).catch(()=>{photoCache[title]=[];return [];});
 }
+function fetchSummary(title){
+  const key='s:'+title;
+  if(key in photoCache)return Promise.resolve(photoCache[key]);
+  return jsonp('https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=extracts%7Cpageimages&exintro=1&explaintext=1&piprop=thumbnail&pithumbsize=640&titles='+encodeURIComponent(title))
+    .then(d=>{const p=d&&d.query&&d.query.pages?Object.values(d.query.pages)[0]:null;const o={img:null,extract:'',title:title};
+      if(p&&!('missing' in p)){o.title=p.title||title;o.extract=p.extract||'';o.img=p.thumbnail?p.thumbnail.source:null;}
+      photoCache[key]=o;return o;})
+    .catch(()=>{const o={img:null,extract:'',title:title};photoCache[key]=o;return o;});
+}
 function buildCarousel(title){
   const c=document.createElement('div');c.className='caro';
-  c.innerHTML='<div class="caroframe"><div class="carostatus">Loading photos…</div></div><div class="carocap"></div>';
-  fetchPhotos(title).then(list=>{
-    const frame=c.querySelector('.caroframe');
+  c.innerHTML='<div class="caroframe"><div class="carostatus">Loading…</div></div><div class="carocap"></div><div class="carodesc"></div>';
+  Promise.all([fetchSummary(title),fetchPhotos(title)]).then(([sum,photos])=>{
+    const frame=c.querySelector('.caroframe'),desc=c.querySelector('.carodesc');
+    let list=[];
+    if(sum.img)list.push({src:sum.img,cap:sum.title});
+    photos.forEach(p=>{if(!list.some(x=>x.src===p.src))list.push(p);});
+    if(sum.extract){let t=sum.extract;if(t.length>340)t=t.slice(0,338).trim()+'…';desc.textContent=t;}else{desc.style.display='none';}
     if(!list.length){frame.innerHTML='<div class="carostatus">No photos found</div>';return;}
     c._u=list;c._i=0;
     frame.innerHTML='<img class="caroimg" alt=""><button class="cbtn cprev">‹</button><button class="cbtn cnext">›</button><div class="ccount"></div>';
@@ -227,33 +242,42 @@ function buildCarousel(title){
 function showInfo(box,sv,it,header){
   box.innerHTML=header+'<div class="hw">'+it.hint+'</div>';
   box.insertBefore(buildCarousel(it.n), box.querySelector('.hw'));
-  box.style.display='block';
-  const r=sv.getBoundingClientRect();
-  const a=(sv.getAttribute('viewBox')||'0 0 1000 500').split(' ').map(Number);
-  const s=Math.min(r.width/a[2],r.height/a[3]);
-  const ox=(r.width-a[2]*s)/2,oy=(r.height-a[3]*s)/2;
-  const px=ox+(it.x-a[0])*s,py=oy+(it.y-a[1])*s;
-  const bw=box.offsetWidth,bh=box.offsetHeight;
-  let left=px+12,top=py-bh-10;
-  if(top<6)top=py+14;
-  if(left+bw>r.width-6)left=r.width-bw-6;
-  if(left<6)left=6;
-  if(top+bh>r.height-6)top=Math.max(6,r.height-bh-6);
-  box.style.left=left+'px';box.style.top=top+'px';
+  box.scrollTop=0;box.style.display='block';
 }
 function hideInfo(){$('info').style.display='none';$('linfo').style.display='none';}
 const wikiCache={};const tip=$('wikitip');
-function placeTip(a){const r=a.getBoundingClientRect();let l=r.left;if(l+270>window.innerWidth)l=window.innerWidth-270;tip.style.left=Math.max(8,l)+'px';let t=r.bottom+8;if(t+160>window.innerHeight)t=r.top-160;tip.style.top=Math.max(8,t)+'px';}
-function renderTip(d){if(!d){tip.innerHTML='<div class="wt">No preview available</div>';return;}const img=d.thumbnail?('<img src="'+d.thumbnail.source+'">'):'';tip.innerHTML=img+'<div class="wt">'+esc(d.title)+'</div><div>'+esc((d.extract||'').slice(0,260))+'</div>';}
-function showTip(a){const t=a.getAttribute('data-t');placeTip(a);tip.style.display='block';
+function placeTip(a){
+  if(!a)return;const r=a.getBoundingClientRect();
+  tip.style.maxHeight=Math.min(300,window.innerHeight-16)+'px';
+  const tw=tip.offsetWidth||250, th=tip.offsetHeight||140;
+  let left=r.left; if(left+tw>window.innerWidth-8)left=window.innerWidth-tw-8; if(left<8)left=8;
+  let top=r.bottom+8;                                  // prefer below the link
+  if(top+th>window.innerHeight-8){ top=r.top-8-th; }   // not enough room -> above
+  if(top<8) top=8;                                     // still too tall -> top of screen (box scrolls)
+  tip.style.left=left+'px';tip.style.top=top+'px';
+}
+function renderTip(d){
+  if(!d){tip.innerHTML='<div class="wt">No preview available</div>';placeTip(tip._a);return;}
+  const img=d.thumbnail?('<img src="'+d.thumbnail.source+'">'):'';
+  tip.innerHTML=img+'<div class="wt">'+esc(d.title)+'</div><div>'+esc((d.extract||'').slice(0,260))+'</div>';
+  placeTip(tip._a);
+  const im=tip.querySelector('img'); if(im)im.onload=()=>placeTip(tip._a);
+}
+function showTip(a){const t=a.getAttribute('data-t');tip._a=a;tip.style.display='block';
   if(t in wikiCache){renderTip(wikiCache[t]);return;}
-  tip.innerHTML='<div class="wt">Loading…</div>';
+  tip.innerHTML='<div class="wt">Loading…</div>';placeTip(a);
   const u='https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts|pageimages&exintro=1&explaintext=1&piprop=thumbnail&pithumbsize=280&redirects=1&titles='+encodeURIComponent(t);
   jsonp(u).then(d=>{const p=Object.values((d.query&&d.query.pages)||{})[0];let o=null;
     if(p&&!('missing' in p))o={title:p.title,extract:p.extract||'',thumbnail:p.thumbnail?{source:p.thumbnail.source}:null};
     wikiCache[t]=o;if(tip.style.display==='block')renderTip(o);}).catch(()=>{wikiCache[t]=null;renderTip(null);});}
-document.addEventListener('mouseover',e=>{const a=e.target.closest&&e.target.closest('.wl');if(a)showTip(a);});
-document.addEventListener('mouseout',e=>{const a=e.target.closest&&e.target.closest('.wl');if(a)tip.style.display='none';});
+let tipHide=null;
+function cancelTipHide(){clearTimeout(tipHide);}
+function scheduleTipHide(){clearTimeout(tipHide);tipHide=setTimeout(()=>{tip.style.display='none';},300);}
+document.addEventListener('mouseover',e=>{const a=e.target.closest&&e.target.closest('.wl');if(a){cancelTipHide();showTip(a);}});
+document.addEventListener('mouseout',e=>{const a=e.target.closest&&e.target.closest('.wl');if(a)scheduleTipHide();});
+tip.addEventListener('mouseenter',cancelTipHide);
+tip.addEventListener('mouseleave',scheduleTipHide);
+document.addEventListener('pointerdown',e=>{if(!(e.target.closest&&(e.target.closest('.wl')||e.target.closest('#wikitip'))))tip.style.display='none';});
 
 /* ---------- LEARN ---------- */
 let li=0,ltimer=null;
@@ -262,16 +286,16 @@ function learnShow(){
   const it=round[queue[li]];
   round.forEach(x=>x._lpins.classList.remove('correct'));
   it._lpins.classList.add('correct');
-  $('lmap').setAttribute('viewBox',(autoFocus?(VIEWS[it.c]||VIEWS.World):baseVB).join(' '));sizePins();
+  lbaseVB=(autoFocus?(VIEWS[it.c]||VIEWS.World):baseVB).slice();lvb=focusVB(lbaseVB,it);setLVB();
   $('lclue').textContent=it.clue;$('lprog').textContent=(li+1)+' / '+queue.length;
   pulse('lpins',it,'#34a853');
-  showInfo($('linfo'),$('lmap'),it,'<div class="it">'+wl(it.n)+'</div>');
-  $('lprev').disabled=li<=0;$('lnext').disabled=li>=queue.length-1;
+  showInfo($('linfo'),$('lmap'),it,'<div class="it">'+esc(it.n)+'</div>');
+  $('lprev').disabled=false;$('lnext').disabled=false;
 }
-function playLearn(on){clearInterval(ltimer);if(on){$('lplay').textContent='Pause';ltimer=setInterval(()=>{if(li<queue.length-1){li++;learnShow();}else{playLearn(false);}},9000);}else{$('lplay').textContent='Autoplay';}}
+function playLearn(on){clearInterval(ltimer);if(on){$('lplay').textContent='Pause';ltimer=setInterval(()=>{li=(li+1)%queue.length;learnShow();},9000);}else{$('lplay').textContent='Autoplay';}}
 $('lplay').onclick=()=>playLearn($('lplay').textContent==='Autoplay');
-$('lprev').onclick=()=>{if(li>0){li--;learnShow();playLearn(false);}};
-$('lnext').onclick=()=>{if(li<queue.length-1){li++;learnShow();playLearn(false);}};
+$('lprev').onclick=()=>{li=(li-1+queue.length)%queue.length;learnShow();playLearn(false);};
+$('lnext').onclick=()=>{li=(li+1)%queue.length;learnShow();playLearn(false);};
 $('lstart').onclick=()=>{clearInterval(ltimer);hideInfo();startGame();};
 $('lmenu').onclick=()=>{clearInterval(ltimer);hideInfo();show('home');};
 
@@ -283,13 +307,18 @@ function curItem(){return round[queue[pos]];}
 function showClue(){
   if(frontier>=queue.length)return finish();
   const it=curItem();
-  if(autoFocus){baseVB=(VIEWS[it.c]||VIEWS.World).slice();vb=baseVB.slice();setVB();}
-  hideInfo();
   $('clue').textContent=it.clue;$('hint').innerHTML=it.hint;
   $('prevBtn').disabled=pos<=0;$('nextBtn').disabled=pos>=frontier;
   $('score').textContent='Score '+score;
-  if(active())$('prog').textContent='Clue '+(pos+1)+' / '+queue.length+'   ·   Tries left: '+(MAX-(it.tries||0));
-  else $('prog').textContent='Clue '+(pos+1)+' / '+queue.length+'   ·   '+(it.state==='solved'?('answered (+'+it.pts+')'):'shown');
+  if(active()){
+    if(autoFocus){baseVB=(VIEWS[it.c]||VIEWS.World).slice();vb=baseVB.slice();setVB();}
+    hideInfo();
+    $('prog').textContent='Clue '+(pos+1)+' / '+queue.length+'   ·   Tries left: '+(MAX-(it.tries||0));
+  } else {
+    gameFocus(it);
+    showInfo($('info'),$('map'),it,'<div class="it">'+(it.state==='solved'?'✓ ':'')+esc(it.n)+'</div>');
+    $('prog').textContent='Clue '+(pos+1)+' / '+queue.length+'   ·   '+(it.state==='solved'?('answered, +'+it.pts):'answer shown')+'  (review)';
+  }
 }
 function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),1300);}
 function tap(idx){
@@ -298,12 +327,13 @@ function tap(idx){
   if(idx===queue[pos]){
     tgt.state='solved';tgt._pins.classList.add('correct');
     const pts=[5,4,3][tgt.tries]||0;tgt.pts=pts;score+=pts;$('score').textContent='Score '+score;
-    showInfo($('info'),$('map'),tgt,'<div class="it">✓ '+wl(tgt.n)+'   +'+pts+' pts</div>');
-    setTimeout(advance,1300);
+    gameFocus(tgt);
+    showInfo($('info'),$('map'),tgt,'<div class="it">✓ '+esc(tgt.n)+'   +'+pts+' pts</div>');
+    setTimeout(advance,2600);
   } else {
     const w=round[idx];w._pins.classList.add('wrong');setTimeout(()=>w._pins.classList.remove('wrong'),450);
     tgt.tries++;
-    if(tgt.tries>=MAX){tgt.state='reveal';tgt._pins.classList.add('reveal');pulse('pins',tgt,'#1f6fd6');showInfo($('info'),$('map'),tgt,'<div class="it">Answer: '+wl(tgt.n)+'</div>');tgt.pts=0;setTimeout(advance,2000);}
+    if(tgt.tries>=MAX){tgt.state='reveal';tgt._pins.classList.add('reveal');pulse('pins',tgt,'#1f6fd6');gameFocus(tgt);showInfo($('info'),$('map'),tgt,'<div class="it">Answer: '+esc(tgt.n)+'</div>');tgt.pts=0;setTimeout(advance,4000);}
     else showClue();
   }
 }
@@ -360,10 +390,27 @@ $('zreset').onclick=()=>{vb=baseVB.slice();setVB();};
 wrap.addEventListener('wheel',e=>{e.preventDefault();zoomAt(e.clientX,e.clientY,e.deltaY>0?1.15:0.87);},{passive:false});
 wrap.addEventListener('pointerdown',e=>{ptrs.set(e.pointerId,e);panned=false;lastp={x:e.clientX,y:e.clientY};if(ptrs.size===2){const p=[...ptrs.values()];pinchD=Math.hypot(p[0].clientX-p[1].clientX,p[0].clientY-p[1].clientY);}});
 wrap.addEventListener('pointermove',e=>{if(!ptrs.has(e.pointerId))return;ptrs.set(e.pointerId,e);
-  if(ptrs.size===2){const p=[...ptrs.values()];const d=Math.hypot(p[0].clientX-p[1].clientX,p[0].clientY-p[1].clientY);if(pinchD)zoomAt((p[0].clientX+p[1].clientX)/2,(p[0].clientY+p[1].clientY)/2,pinchD/d);pinchD=d;panned=true;return;}
+  if(ptrs.size===2){const p=[...ptrs.values()];const d=Math.hypot(p[0].clientX-p[1].clientX,p[0].clientY-p[1].clientY);if(pinchD&&d){const zf=1+((pinchD/d)-1)*0.35;zoomAt((p[0].clientX+p[1].clientX)/2,(p[0].clientY+p[1].clientY)/2,zf);}pinchD=d;panned=true;return;}
   if(lastp){const s=uscale();if(Math.abs(e.clientX-lastp.x)+Math.abs(e.clientY-lastp.y)>3)panned=true;vb[0]-=(e.clientX-lastp.x)/s;vb[1]-=(e.clientY-lastp.y)/s;clamp();setVB();lastp={x:e.clientX,y:e.clientY};}});
 function up(e){ptrs.delete(e.pointerId);if(ptrs.size<2)pinchD=0;if(ptrs.size===0)lastp=null;setTimeout(()=>{panned=false;},50);}
 wrap.addEventListener('pointerup',up);wrap.addEventListener('pointercancel',up);
+
+/* keep taps/swipes on the info panel from panning the map */
+['info','linfo'].forEach(id=>{const el=$(id);['pointerdown','pointermove','pointerup','wheel','touchstart','touchmove'].forEach(ev=>el.addEventListener(ev,e=>e.stopPropagation(),{passive:true}));});
+
+/* Learn map: pinch / drag to zoom and move */
+(function(){const lmap=$('lmap'),lwrap=$('lwrap');const P=new Map();let lp=null,pd=0;
+  function us(){const r=lmap.getBoundingClientRect();return Math.min(r.width/lvb[2],r.height/lvb[3]);}
+  function clampL(){const mx=lbaseVB[2]*1.6,mn=lbaseVB[2]*0.12;lvb[2]=Math.max(mn,Math.min(mx,lvb[2]));lvb[3]=lvb[2]*(lbaseVB[3]/lbaseVB[2]);lvb[0]=Math.max(-60,Math.min(1060-lvb[2],lvb[0]));lvb[1]=Math.max(-40,Math.min(540-lvb[3],lvb[1]));}
+  function zoom(cx,cy,f){const r=lmap.getBoundingClientRect();const s=us();const ox=(r.width-lvb[2]*s)/2,oy=(r.height-lvb[3]*s)/2;const wx=lvb[0]+((cx-r.left)-ox)/s,wy=lvb[1]+((cy-r.top)-oy)/s;const fx=(wx-lvb[0])/lvb[2],fy=(wy-lvb[1])/lvb[3];lvb[2]*=f;clampL();lvb[3]=lvb[2]*(lbaseVB[3]/lbaseVB[2]);lvb[0]=wx-fx*lvb[2];lvb[1]=wy-fy*lvb[3];clampL();setLVB();}
+  lwrap.addEventListener('wheel',e=>{if(!lvb)return;e.preventDefault();zoom(e.clientX,e.clientY,e.deltaY>0?1.15:0.87);},{passive:false});
+  lwrap.addEventListener('pointerdown',e=>{P.set(e.pointerId,e);lp={x:e.clientX,y:e.clientY};if(P.size===2){const p=[...P.values()];pd=Math.hypot(p[0].clientX-p[1].clientX,p[0].clientY-p[1].clientY);}});
+  lwrap.addEventListener('pointermove',e=>{if(!P.has(e.pointerId)||!lvb)return;P.set(e.pointerId,e);
+    if(P.size===2){const p=[...P.values()];const d=Math.hypot(p[0].clientX-p[1].clientX,p[0].clientY-p[1].clientY);if(pd&&d){const zf=1+((pd/d)-1)*0.35;zoom((p[0].clientX+p[1].clientX)/2,(p[0].clientY+p[1].clientY)/2,zf);}pd=d;return;}
+    if(lp){const s=us();lvb[0]-=(e.clientX-lp.x)/s;lvb[1]-=(e.clientY-lp.y)/s;clampL();setLVB();lp={x:e.clientX,y:e.clientY};}});
+  function lup(e){P.delete(e.pointerId);if(P.size<2)pd=0;if(P.size===0)lp=null;}
+  lwrap.addEventListener('pointerup',lup);lwrap.addEventListener('pointercancel',lup);
+})();
 
 show('home');
 </script>

@@ -958,14 +958,6 @@
     },
     {
      "c": "Europe",
-     "n": "Positano",
-     "x": 540.22,
-     "y": 137.14,
-     "clue": "Pastel houses tumble down steep seaside cliffs in which Italian village, also famous as a jewel of the Amalfi Coast?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Italy\" data-t=\"Italy\">Italy</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Pastel_cliffside_houses\" data-t=\"Pastel cliffside houses\">Pastel cliffside houses</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Amalfi_Coast_cliffs\" data-t=\"Amalfi Coast cliffs\">Amalfi Coast cliffs</a><br><b>Interesting Fact:</b> Houses cling to steep cliffs above the sea"
-    },
-    {
-     "c": "Europe",
      "n": "Nice",
      "x": 520.19,
      "y": 128.61,
@@ -1078,14 +1070,6 @@
     },
     {
      "c": "Europe",
-     "n": "Bruges",
-     "x": 508.94,
-     "y": 107.75,
-     "clue": "Medieval canals wind past a tall belfry in which Belgian city, also nicknamed the 'Venice of the North'?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Belgium\" data-t=\"Belgium\">Belgium</a><br><b>Man-made Landmarks:</b> Belfry of this place<br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Medieval_canals\" data-t=\"Medieval canals\">Medieval canals</a><br><b>Interesting Fact:</b> Nicknamed the 'Venice of the North'"
-    },
-    {
-     "c": "Europe",
      "n": "Dubrovnik",
      "x": 550.31,
      "y": 131.56,
@@ -1094,59 +1078,11 @@
     },
     {
      "c": "Europe",
-     "n": "Split",
-     "x": 545.67,
-     "y": 129.14,
-     "clue": "An entire old town grew up inside a Roman emperor's palace in which sunny Croatian city on the Adriatic coast?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Croatia\" data-t=\"Croatia\">Croatia</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Diocletian%27s_Palace\" data-t=\"Diocletian's Palace\">Diocletian's Palace</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Adriatic_coast\" data-t=\"Adriatic coast\">Adriatic coast</a><br><b>Interesting Fact:</b> Grew up inside a Roman emperor's palace"
-    },
-    {
-     "c": "Europe",
-     "n": "Bergen",
-     "x": 514.78,
-     "y": 82.25,
-     "clue": "Colorful wooden wharf houses called Bryggen line the harbor of which Norwegian city, also known as the gateway to the fjords?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Norway\" data-t=\"Norway\">Norway</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Bryggen_wharf_houses\" data-t=\"Bryggen wharf houses\">Bryggen wharf houses</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Surrounded_by_fjords_and_seven_mountains\" data-t=\"Surrounded by fjords and seven mountains\">Surrounded by fjords and seven mountains</a><br><b>Interesting Fact:</b> The gateway to Norway's fjords"
-    },
-    {
-     "c": "Europe",
-     "n": "Galway",
-     "x": 474.86,
-     "y": 102.03,
-     "clue": "Traditional Irish music spills from the Latin Quarter near the Cliffs of Moher in which lively city on Ireland's wild Atlantic coast?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Ireland\" data-t=\"Ireland\">Ireland</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Latin_Quarter_streets\" data-t=\"Latin Quarter streets\">Latin Quarter streets</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Wild_Atlantic_coast\" data-t=\"Wild Atlantic coast\">Wild Atlantic coast</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Cliffs_of_Moher_nearby\" data-t=\"Cliffs of Moher nearby\">Cliffs of Moher nearby</a><br><b>Interesting Fact:</b> A lively hub of traditional Irish music"
-    },
-    {
-     "c": "Europe",
      "n": "Rotterdam",
      "x": 512.44,
      "y": 105.78,
      "clue": "Bold modern Cube Houses and Europe's busiest seaport define which Dutch city, rebuilt with daring architecture after World War II?",
      "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Netherlands\" data-t=\"Netherlands\">Netherlands</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Cube_Houses\" data-t=\"Cube Houses\">Cube Houses</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/modern_skyline\" data-t=\"modern skyline\">modern skyline</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Nieuwe_Maas_river\" data-t=\"Nieuwe Maas river\">Nieuwe Maas river</a><br><b>Interesting Fact:</b> Home to Europe's largest seaport"
-    },
-    {
-     "c": "Asia",
-     "n": "Cappadocia",
-     "x": 596.75,
-     "y": 142.64,
-     "clue": "Hot-air balloons drift at sunrise over 'fairy chimney' rock towers in which region of Turkey, also famous for homes and churches carved into the rock?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Turkey\" data-t=\"Turkey\">Turkey</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Cave_churches\" data-t=\"Cave churches\">Cave churches</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/hot-air_balloons\" data-t=\"hot-air balloons\">hot-air balloons</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/%27Fairy_chimney%27_rock_formations\" data-t=\"'Fairy chimney' rock formations\">'Fairy chimney' rock formations</a><br><b>Interesting Fact:</b> Famous for sunrise hot-air balloon rides"
-    },
-    {
-     "c": "Asia",
-     "n": "Pamukkale",
-     "x": 580.89,
-     "y": 144.67,
-     "clue": "Bright white terraces of mineral pools cascade down a hillside in which Turkish spot, whose name means 'cotton castle'?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Turkey\" data-t=\"Turkey\">Turkey</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Ancient_city_of_Hierapolis\" data-t=\"Ancient city of Hierapolis\">Ancient city of Hierapolis</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/White_travertine_mineral_terraces\" data-t=\"White travertine mineral terraces\">White travertine mineral terraces</a><br><b>Interesting Fact:</b> Its name means 'cotton castle'"
-    },
-    {
-     "c": "Asia",
-     "n": "Ephesus",
-     "x": 575.94,
-     "y": 144.61,
-     "clue": "The grand facade of the Library of Celsus still stands among the ruins of which ancient Turkish city, one of the best-preserved on Earth?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Turkey\" data-t=\"Turkey\">Turkey</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Library_of_Celsus_ruins\" data-t=\"Library of Celsus ruins\">Library of Celsus ruins</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Aegean_coastal_plain\" data-t=\"Aegean coastal plain\">Aegean coastal plain</a><br><b>Interesting Fact:</b> One of the best-preserved ancient cities"
     },
     {
      "c": "Asia",
@@ -1198,22 +1134,6 @@
     },
     {
      "c": "Asia",
-     "n": "Nara",
-     "x": 877.25,
-     "y": 153.64,
-     "clue": "A giant bronze Buddha sits in a vast wooden hall in which Japanese city, also famous for the tame deer that roam its park?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Japan\" data-t=\"Japan\">Japan</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/T%C5%8Ddai-ji_Great_Buddha_hall\" data-t=\"Tōdai-ji Great Buddha hall\">Tōdai-ji Great Buddha hall</a><br><b>Geographical Landmarks:</b> This place Park<br><b>Interesting Fact:</b> Tame deer roam freely through the city"
-    },
-    {
-     "c": "Asia",
-     "n": "Yangshuo",
-     "x": 806.92,
-     "y": 181.17,
-     "clue": "Jagged karst peaks rise along the Li River around which Chinese town, whose dreamy scenery appears on China's money?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/China\" data-t=\"China\">China</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Karst_limestone_peaks\" data-t=\"Karst limestone peaks\">Karst limestone peaks</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Li_River\" data-t=\"Li River\">Li River</a><br><b>Interesting Fact:</b> Its scenery features on China's money"
-    },
-    {
-     "c": "Asia",
      "n": "Chengdu",
      "x": 789.08,
      "y": 165.08,
@@ -1230,27 +1150,11 @@
     },
     {
      "c": "Asia",
-     "n": "Chiang Mai",
-     "x": 774.94,
-     "y": 197.81,
-     "clue": "Mountain temples like Doi Suthep watch over which northern Thai city, also known as the heart of old Lanna culture?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Thailand\" data-t=\"Thailand\">Thailand</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Doi_Suthep_mountain_temple\" data-t=\"Doi Suthep mountain temple\">Doi Suthep mountain temple</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Northern_mountains\" data-t=\"Northern mountains\">Northern mountains</a><br><b>Interesting Fact:</b> The center of Thailand's old Lanna culture"
-    },
-    {
-     "c": "Asia",
      "n": "Phuket",
      "x": 773.31,
      "y": 228.11,
      "clue": "A giant white Buddha overlooks Andaman Sea beaches on which Thai destination, also the country's largest island?",
      "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Thailand\" data-t=\"Thailand\">Thailand</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Big_Buddha\" data-t=\"Big Buddha\">The Big Buddha</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Andaman_Sea_beaches\" data-t=\"Andaman Sea beaches\">Andaman Sea beaches</a><br><b>Interesting Fact:</b> Thailand's largest island"
-    },
-    {
-     "c": "Asia",
-     "n": "Hoi An",
-     "x": 800.94,
-     "y": 205.89,
-     "clue": "Thousands of glowing lanterns light an old town by the Thu Bon River in which Vietnamese city, also famous for its Japanese covered bridge?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Vietnam\" data-t=\"Vietnam\">Vietnam</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Lantern-lit_old_town\" data-t=\"Lantern-lit old town\">Lantern-lit old town</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Japanese_Bridge\" data-t=\"Japanese Bridge\">Japanese Bridge</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Thu_Bon_River\" data-t=\"Thu Bon River\">Thu Bon River</a><br><b>Interesting Fact:</b> Its streets glow with thousands of lanterns"
     },
     {
      "c": "Asia",
@@ -1294,22 +1198,6 @@
     },
     {
      "c": "Asia",
-     "n": "Pokhara",
-     "x": 733.31,
-     "y": 171.64,
-     "clue": "Calm Phewa Lake mirrors the snowy Annapurna peaks beside which Nepalese city, also the gateway to Himalayan treks?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Nepal\" data-t=\"Nepal\">Nepal</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Lakeside_temples\" data-t=\"Lakeside temples\">Lakeside temples</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Phewa_Lake\" data-t=\"Phewa Lake\">Phewa Lake</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Annapurna_peaks\" data-t=\"Annapurna peaks\">Annapurna peaks</a><br><b>Interesting Fact:</b> The gateway to Annapurna mountain treks"
-    },
-    {
-     "c": "Asia",
-     "n": "Bagan",
-     "x": 763.5,
-     "y": 191.19,
-     "clue": "More than two thousand ancient temples dot a single plain by the Irrawaddy River at which place in Myanmar, famous for its sea of temples?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Myanmar\" data-t=\"Myanmar\">Myanmar</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Thousands_of_ancient_temples\" data-t=\"Thousands of ancient temples\">Thousands of ancient temples</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Irrawaddy_River_plain\" data-t=\"Irrawaddy River plain\">Irrawaddy River plain</a><br><b>Interesting Fact:</b> Over 2,000 temples dot a single plain"
-    },
-    {
-     "c": "Asia",
      "n": "Busan",
      "x": 858.56,
      "y": 152.28,
@@ -1325,36 +1213,12 @@
      "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Uzbekistan\" data-t=\"Uzbekistan\">Uzbekistan</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Registan_square\" data-t=\"Registan square\">The Registan square</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Zarafshan_Valley\" data-t=\"Zarafshan Valley\">Zarafshan Valley</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Silk_Road\" data-t=\"Silk Road\">Silk Road</a><br><b>Interesting Fact:</b> A jewel of the ancient Silk Road"
     },
     {
-     "c": "Asia",
-     "n": "George Town",
-     "x": 778.69,
-     "y": 234.97,
-     "clue": "Old shophouses covered in street-art murals fill which Malaysian city on Penang Island, also famous for its food?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Malaysia\" data-t=\"Malaysia\">Malaysia</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Heritage_shophouses_and_street_art\" data-t=\"Heritage shophouses and street art\">Heritage shophouses and street art</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Penang_Island_coast\" data-t=\"Penang Island coast\">Penang Island coast</a><br><b>Interesting Fact:</b> Famous for its food and wall murals"
-    },
-    {
-     "c": "Asia",
-     "n": "El Nido",
-     "x": 831.72,
-     "y": 218.89,
-     "clue": "Hidden lagoons nestle among towering limestone cliffs reached only by boat at which spot in the Philippines, on the island of Palawan?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Philippines\" data-t=\"Philippines\">Philippines</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Limestone_cliffs_and_hidden_lagoons\" data-t=\"Limestone cliffs and hidden lagoons\">Limestone cliffs and hidden lagoons</a><br><b>Interesting Fact:</b> Secret beaches reached only by boat"
-    },
-    {
      "c": "Africa",
      "n": "Fez",
      "x": 486.11,
      "y": 155.44,
      "clue": "A maze-like walled medina holds the world's oldest university in which Moroccan city, also one of the country's ancient imperial cities?",
      "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Morocco\" data-t=\"Morocco\">Morocco</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Ancient_walled_medina\" data-t=\"Ancient walled medina\">Ancient walled medina</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Middle_Atlas_foothills\" data-t=\"Middle Atlas foothills\">Middle Atlas foothills</a><br><b>Interesting Fact:</b> Home to the world's oldest university"
-    },
-    {
-     "c": "Africa",
-     "n": "Chefchaouen",
-     "x": 485.36,
-     "y": 152.31,
-     "clue": "Streets and walls painted every shade of blue climb the Rif Mountains in which Moroccan town, also known simply as the 'Blue City'?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Morocco\" data-t=\"Morocco\">Morocco</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Blue-painted_old_town\" data-t=\"Blue-painted old town\">Blue-painted old town</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Rif_Mountains\" data-t=\"Rif Mountains\">Rif Mountains</a><br><b>Interesting Fact:</b> Famous as the 'Blue City' of the mountains"
     },
     {
      "c": "Africa",
@@ -1387,38 +1251,6 @@
      "y": 332.94,
      "clue": "A warm 'Golden Mile' of beaches stretches along the Indian Ocean in which South African city, also one of its busiest ports?",
      "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/South_Africa\" data-t=\"South Africa\">South Africa</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Golden_Mile_beachfront\" data-t=\"Golden Mile beachfront\">Golden Mile beachfront</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Indian_Ocean_coast\" data-t=\"Indian Ocean coast\">Indian Ocean coast</a><br><b>Interesting Fact:</b> South Africa's warmest big-city beaches"
-    },
-    {
-     "c": "Africa",
-     "n": "Lalibela",
-     "x": 608.44,
-     "y": 216.58,
-     "clue": "Eleven churches were carved straight down into solid rock in which Ethiopian highland town, a famous Christian pilgrimage site?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Ethiopia\" data-t=\"Ethiopia\">Ethiopia</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Rock-hewn_churches\" data-t=\"Rock-hewn churches\">Rock-hewn churches</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Ethiopian_Highlands\" data-t=\"Ethiopian Highlands\">Ethiopian Highlands</a><br><b>Interesting Fact:</b> Eleven churches carved down into solid rock"
-    },
-    {
-     "c": "Africa",
-     "n": "Swakopmund",
-     "x": 540.36,
-     "y": 313.0,
-     "clue": "German colonial buildings sit where towering Namib dunes meet the Atlantic in which Namibian seaside town?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Namibia\" data-t=\"Namibia\">Namibia</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/German_colonial_buildings\" data-t=\"German colonial buildings\">German colonial buildings</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Where_the_Namib_dunes_meet_the_Atlantic\" data-t=\"Where the Namib dunes meet the Atlantic\">Where the Namib dunes meet the Atlantic</a><br><b>Interesting Fact:</b> A desert town right beside the ocean"
-    },
-    {
-     "c": "Africa",
-     "n": "Sidi Bou Said",
-     "x": 528.75,
-     "y": 147.58,
-     "clue": "Blue doors and white walls overlook the sea from which clifftop village near Tunis?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Tunisia\" data-t=\"Tunisia\">Tunisia</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Blue-and-white_hilltop_village\" data-t=\"Blue-and-white hilltop village\">Blue-and-white hilltop village</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Cliffs_over_the_Gulf_of_Tunis\" data-t=\"Cliffs over the Gulf of Tunis\">Cliffs over the Gulf of Tunis</a><br><b>Interesting Fact:</b> Famous blue doors overlooking the sea"
-    },
-    {
-     "c": "Africa",
-     "n": "Gorée Island",
-     "x": 451.67,
-     "y": 209.25,
-     "clue": "The somber House of Slaves stands on which small Atlantic island just off Dakar, a powerful place of memory?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Senegal\" data-t=\"Senegal\">Senegal</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/House_of_Slaves\" data-t=\"House of Slaves\">House of Slaves</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Atlantic_island_off_Dakar\" data-t=\"Atlantic island off Dakar\">Atlantic island off Dakar</a><br><b>Interesting Fact:</b> A small island with a powerful history"
     },
     {
      "c": "North America",
@@ -1478,14 +1310,6 @@
     },
     {
      "c": "North America",
-     "n": "Tulum",
-     "x": 257.03,
-     "y": 193.86,
-     "clue": "Maya ruins perch on a cliff above turquoise Caribbean water at which Mexican town on the Yucatán coast?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Mexico\" data-t=\"Mexico\">Mexico</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Clifftop_Maya_ruins\" data-t=\"Clifftop Maya ruins\">Clifftop Maya ruins</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Caribbean_Sea_beaches\" data-t=\"Caribbean Sea beaches\">Caribbean Sea beaches</a><br><b>Interesting Fact:</b> Maya ruins perched above the sea"
-    },
-    {
-     "c": "North America",
      "n": "Oaxaca",
      "x": 231.33,
      "y": 202.58,
@@ -1526,14 +1350,6 @@
     },
     {
      "c": "South America",
-     "n": "Bariloche",
-     "x": 301.92,
-     "y": 364.25,
-     "clue": "Swiss-style chocolate shops sit among Andean lakes in which Argentine town, the heart of the country's lake district?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Argentina\" data-t=\"Argentina\">Argentina</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Swiss-style_chocolate_town\" data-t=\"Swiss-style chocolate town\">Swiss-style chocolate town</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Andean_lakes\" data-t=\"Andean lakes\">Andean lakes</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Nahuel_Huapi\" data-t=\"Nahuel Huapi\">Nahuel Huapi</a><br><b>Interesting Fact:</b> Argentina's alpine lake-district resort"
-    },
-    {
-     "c": "South America",
      "n": "Ushuaia",
      "x": 310.28,
      "y": 402.22,
@@ -1563,14 +1379,6 @@
      "y": 313.64,
      "clue": "An adobe village is the base for exploring geysers and salt flats in which spot in Chile's Atacama, the driest desert on Earth?",
      "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Chile\" data-t=\"Chile\">Chile</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Adobe_village\" data-t=\"Adobe village\">Adobe village</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Atacama_Desert\" data-t=\"Atacama Desert\">Atacama Desert</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/geysers\" data-t=\"geysers\">geysers</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/salt_flats\" data-t=\"salt flats\">salt flats</a><br><b>Interesting Fact:</b> Base for exploring the driest desert on Earth"
-    },
-    {
-     "c": "South America",
-     "n": "Arequipa",
-     "x": 301.28,
-     "y": 295.58,
-     "clue": "Buildings of white volcanic stone gleam beneath the El Misti volcano in which Peruvian city, also called the 'White City'?",
-     "hint": "<b>Location:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Peru\" data-t=\"Peru\">Peru</a><br><b>Man-made Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/White_volcanic-stone_buildings\" data-t=\"White volcanic-stone buildings\">White volcanic-stone buildings</a><br><b>Geographical Landmarks:</b> <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/El_Misti_volcano\" data-t=\"El Misti volcano\">El Misti volcano</a>, <a class=\"wl\" target=\"_blank\" rel=\"noopener\" href=\"https://en.wikipedia.org/wiki/Colca_Canyon\" data-t=\"Colca Canyon\">Colca Canyon</a><br><b>Interesting Fact:</b> Known as the 'White City' of Peru"
     },
     {
      "c": "South America",
@@ -2022,7 +1830,7 @@
    "All": [
     {
      "c": "India",
-     "n": "Andhra Pradesh",
+     "n": "Andhra Pradesh (Amaravati)",
      "x": 723.67,
      "y": 204.14,
      "clue": "The hilltop shrine of Tirupati, one of the most visited temples on Earth, draws millions of pilgrims to which southern state, also known as the 'Rice Bowl of India' with its new capital at Amaravati?",
@@ -2030,7 +1838,7 @@
     },
     {
      "c": "India",
-     "n": "Arunachal Pradesh",
+     "n": "Arunachal Pradesh (Itanagar)",
      "x": 760.06,
      "y": 174.72,
      "clue": "The grand Tawang Monastery, the largest in India, sits high in which state, also known as the 'Land of the Dawn-Lit Mountains' and the first part of India to see the sunrise?",
@@ -2038,7 +1846,7 @@
     },
     {
      "c": "India",
-     "n": "Assam",
+     "n": "Assam (Dispur)",
      "x": 754.97,
      "y": 177.39,
      "clue": "The rare one-horned rhinos of Kaziranga graze beside the wide Brahmaputra River in which state, also famous as the heart of India's tea gardens?",
@@ -2046,7 +1854,7 @@
     },
     {
      "c": "India",
-     "n": "Bihar",
+     "n": "Bihar (Patna)",
      "x": 736.5,
      "y": 178.86,
      "clue": "The Buddha gained enlightenment under a tree at Bodh Gaya, where the ancient Nalanda University also once stood, in which state, also known as the 'Land of Buddha'?",
@@ -2054,7 +1862,7 @@
     },
     {
      "c": "India",
-     "n": "Chhattisgarh",
+     "n": "Chhattisgarh (Raipur)",
      "x": 726.75,
      "y": 190.97,
      "clue": "The horseshoe-shaped Chitrakote Falls, called the 'Niagara of India,' thunders through the forests of which state, also known as a 'Rice Bowl of India'?",
@@ -2062,7 +1870,7 @@
     },
     {
      "c": "India",
-     "n": "Goa",
+     "n": "Goa (Panaji)",
      "x": 705.08,
      "y": 206.97,
      "clue": "The Basilica of Bom Jesus and old Portuguese churches stand near the sunny beaches of which smallest Indian state, also known as the 'Pearl of the Orient'?",
@@ -2070,7 +1878,7 @@
     },
     {
      "c": "India",
-     "n": "Gujarat",
+     "n": "Gujarat (Gandhinagar)",
      "x": 701.81,
      "y": 185.5,
      "clue": "The Statue of Unity, the tallest statue in the world, rises in which state, also famous as the birthplace of Mahatma Gandhi and the last home of Asiatic lions in Gir?",
@@ -2078,7 +1886,7 @@
     },
     {
      "c": "India",
-     "n": "Haryana",
+     "n": "Haryana (Chandigarh)",
      "x": 713.47,
      "y": 164.72,
      "clue": "The great Mahabharata war was said to be fought on the field of Kurukshetra in which state, also known as a 'breadbasket' famous for its wheat and milk?",
@@ -2086,7 +1894,7 @@
     },
     {
      "c": "India",
-     "n": "Himachal Pradesh",
+     "n": "Himachal Pradesh (Shimla)",
      "x": 714.36,
      "y": 163.61,
      "clue": "A famous toy train climbs to the colonial hill station of Shimla in which mountain state, also known as 'Dev Bhoomi,' the Land of the Gods, famous for its apples?",
@@ -2094,7 +1902,7 @@
     },
     {
      "c": "India",
-     "n": "Jharkhand",
+     "n": "Jharkhand (Ranchi)",
      "x": 736.97,
      "y": 185.17,
      "clue": "Rich coal and iron mines power which heavily forested state, also known as the 'Land of Forests,' with its capital at Ranchi?",
@@ -2102,7 +1910,7 @@
     },
     {
      "c": "India",
-     "n": "Karnataka",
+     "n": "Karnataka (Bengaluru)",
      "x": 715.53,
      "y": 213.97,
      "clue": "The boulder-strewn ruins of the ancient city of Hampi and the grand Mysore Palace lie in which state, also known as the 'Silicon Valley of India' for its tech hub Bengaluru?",
@@ -2110,7 +1918,7 @@
     },
     {
      "c": "India",
-     "n": "Kerala",
+     "n": "Kerala (Thiruvananthapuram)",
      "x": 713.72,
      "y": 226.33,
      "clue": "Houseboats glide through palm-fringed backwaters in which spice-growing southern state, also lovingly called 'God's Own Country'?",
@@ -2118,7 +1926,7 @@
     },
     {
      "c": "India",
-     "n": "Madhya Pradesh",
+     "n": "Madhya Pradesh (Bhopal)",
      "x": 715.03,
      "y": 185.39,
      "clue": "The intricately carved temples of Khajuraho and the Buddhist Sanchi Stupa stand in which central state, also known as the 'Tiger State' at the very heart of India?",
@@ -2126,7 +1934,7 @@
     },
     {
      "c": "India",
-     "n": "Maharashtra",
+     "n": "Maharashtra (Mumbai)",
      "x": 702.44,
      "y": 197.0,
      "clue": "The rock-cut Ajanta and Ellora caves were carved long ago in which state, also home to Mumbai, India's financial capital and the heart of Bollywood?",
@@ -2134,7 +1942,7 @@
     },
     {
      "c": "India",
-     "n": "Manipur",
+     "n": "Manipur (Imphal)",
      "x": 760.94,
      "y": 181.06,
      "clue": "Loktak Lake, dotted with floating islands of matted plants, shimmers in which northeastern state, also called the 'Jewel of India,' where the sport of polo was born?",
@@ -2142,7 +1950,7 @@
     },
     {
      "c": "India",
-     "n": "Meghalaya",
+     "n": "Meghalaya (Shillong)",
      "x": 755.22,
      "y": 178.97,
      "clue": "Bridges grown from living tree roots cross the streams of Cherrapunji in which state, also known as the 'Abode of Clouds,' one of the wettest places on Earth?",
@@ -2150,7 +1958,7 @@
     },
     {
      "c": "India",
-     "n": "Mizoram",
+     "n": "Mizoram (Aizawl)",
      "x": 757.56,
      "y": 184.08,
      "clue": "Perched along high ridge-tops above terraced bamboo hills, which northeastern state is also known as the 'Songbird of India'?",
@@ -2158,7 +1966,7 @@
     },
     {
      "c": "India",
-     "n": "Nagaland",
+     "n": "Nagaland (Kohima)",
      "x": 761.42,
      "y": 178.69,
      "clue": "The colorful Hornbill Festival lights up which northeastern state each December, also remembered for the fierce World War II Battle of Kohima?",
@@ -2166,7 +1974,7 @@
     },
     {
      "c": "India",
-     "n": "Odisha",
+     "n": "Odisha (Bhubaneswar)",
      "x": 738.39,
      "y": 193.61,
      "clue": "The chariot-shaped Konark Sun Temple and the Jagannath Temple at Puri stand in which coastal state, also known as the 'Land of Temples'?",
@@ -2174,7 +1982,7 @@
     },
     {
      "c": "India",
-     "n": "Punjab",
+     "n": "Punjab (Chandigarh)",
      "x": 713.28,
      "y": 164.64,
      "clue": "The shimmering Golden Temple at Amritsar welcomes pilgrims of all faiths in which state, also known as the 'Land of Five Rivers' and the 'Granary of India'?",
@@ -2182,7 +1990,7 @@
     },
     {
      "c": "India",
-     "n": "Rajasthan",
+     "n": "Rajasthan (Jaipur)",
      "x": 710.53,
      "y": 175.25,
      "clue": "Camels cross the sandy Thar Desert past towering hilltop forts in which largest Indian state, also known as the 'Land of Kings' whose 'Pink City' is Jaipur?",
@@ -2190,7 +1998,7 @@
     },
     {
      "c": "India",
-     "n": "Sikkim",
+     "n": "Sikkim (Gangtok)",
      "x": 746.14,
      "y": 174.08,
      "clue": "Kangchenjunga, the third-highest mountain on Earth, towers over which tiny Himalayan state, also famous as India's first fully organic state?",
@@ -2198,7 +2006,7 @@
     },
     {
      "c": "India",
-     "n": "Tamil Nadu",
+     "n": "Tamil Nadu (Chennai)",
      "x": 722.97,
      "y": 213.67,
      "clue": "The towering, sculpture-covered Meenakshi Temple at Madurai rises in which southern state, also known as a 'Land of Temples' whose long Marina Beach lines Chennai?",
@@ -2206,7 +2014,7 @@
     },
     {
      "c": "India",
-     "n": "Telangana",
+     "n": "Telangana (Hyderabad)",
      "x": 718.03,
      "y": 201.69,
      "clue": "The four-arched Charminar and the hilltop Golconda Fort stand in Hyderabad in which state, also famous as India's youngest state, formed in 2014?",
@@ -2214,7 +2022,7 @@
     },
     {
      "c": "India",
-     "n": "Tripura",
+     "n": "Tripura (Agartala)",
      "x": 753.56,
      "y": 183.81,
      "clue": "The lovely Neermahal palace floats in the middle of a lake in which small northeastern state, also known as the 'Land of Fourteen Gods'?",
@@ -2222,7 +2030,7 @@
     },
     {
      "c": "India",
-     "n": "Uttar Pradesh",
+     "n": "Uttar Pradesh (Lucknow)",
      "x": 724.86,
      "y": 175.42,
      "clue": "The white-marble Taj Mahal at Agra and the holy riverside city of Varanasi both belong to which state, also known as the most populous in all of India?",
@@ -2230,7 +2038,7 @@
     },
     {
      "c": "India",
-     "n": "Uttarakhand",
+     "n": "Uttarakhand (Dehradun)",
      "x": 716.75,
      "y": 165.78,
      "clue": "The sacred Ganges River is born from Himalayan glaciers in which state, also known as 'Dev Bhoomi,' the Land of the Gods, home to the yoga town of Rishikesh?",
@@ -2238,7 +2046,7 @@
     },
     {
      "c": "India",
-     "n": "West Bengal",
+     "n": "West Bengal (Kolkata)",
      "x": 745.44,
      "y": 187.31,
      "clue": "The tiger-filled Sundarbans mangroves and the grand Victoria Memorial in Kolkata belong to which state, also known as the 'Cultural Capital of India'?",

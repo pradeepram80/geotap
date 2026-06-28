@@ -34,11 +34,11 @@
   #game,#learn{display:none}
   .clue{background:#fff;margin:10px 12px 6px;padding:13px 16px;border-radius:14px;border:1px solid #e2e8f0;font-size:16px;line-height:1.4;min-height:54px;display:flex;align-items:center}
   .mapwrap{flex:1;min-height:46vh;margin:6px 12px 0;border-radius:14px;overflow:hidden;border:1px solid #bcd3e6;background:#d6e7f3;position:relative;touch-action:none}
-  svg{width:100%;height:100%;display:block}
+  #map,#lmap{width:100%;height:100%;display:block}
   .land{fill:#eae4d4;stroke:#9aa18c;stroke-width:.5;vector-effect:non-scaling-stroke;stroke-linejoin:round}
   .border{fill:none;stroke:#aeb9c7;stroke-width:.7;vector-effect:non-scaling-stroke;stroke-linejoin:round;pointer-events:none;opacity:.85}
   .hit{fill:transparent;cursor:pointer}
-  .pin{fill:#fff;stroke:#e07a45;stroke-width:2.2;vector-effect:non-scaling-stroke;pointer-events:none}
+  .pin{fill:#faf3df;stroke:#e07a45;stroke-width:2.2;vector-effect:non-scaling-stroke;pointer-events:none}
   .pin.correct{fill:#34a853;stroke:#fff}.pin.reveal{fill:#1f6fd6;stroke:#fff}.pin.wrong{fill:#ea4335;stroke:#fff}
   .zoom{position:absolute;left:10px;bottom:10px;display:flex;flex-direction:column;gap:6px;z-index:7}
   @media (max-width:560px){.zoom{top:10px;bottom:auto;left:10px}}
@@ -80,7 +80,7 @@
   .cbtn{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:none;border-radius:50%;background:rgba(18,48,78,.62);color:#fff;font-size:17px;cursor:pointer}
   .cprev{left:6px}.cnext{right:6px}
   .ccount{position:absolute;bottom:6px;right:8px;background:rgba(0,0,0,.5);color:#fff;font-size:11px;padding:1px 6px;border-radius:10px}
-  .wl{color:#1f6fd6;text-decoration:underline;cursor:pointer}
+  .wl{color:#1f6f8c;text-decoration:underline;cursor:pointer}
   #wikitip{position:fixed;display:none;width:250px;max-height:240px;overflow:auto;background:#fff;border:1px solid #cdd9e6;border-radius:10px;box-shadow:0 8px 22px rgba(0,0,0,.25);padding:8px 10px;z-index:50;font-size:12px;color:#33506e;pointer-events:auto}
   #wikitip img{width:100%;max-height:120px;object-fit:cover;border-radius:6px;margin-bottom:6px}
   #wikitip .wt{font-weight:700;color:#12304e;margin-bottom:2px}
@@ -106,26 +106,145 @@
   td.r{text-align:right}
   #end .row{display:flex;gap:12px;margin-top:16px}
 </style>
+<style>
+/* ===== Explorer's Passport theme (app-wide) ===== */
+body{background:#15314f}
+#app{background:#f4ead0}
+.bar{background:#15314f;color:#e8c877}
+.zoom button{background:#15314f;color:#e8c877}
+#home{padding:0;overflow:auto;background:#f4ead0;font-family:Georgia,serif}
+.pp-cover{background:#15314f;padding:13px 14px 15px}
+.pp-cover .frame{border:1.5px solid #c79a3b;border-radius:7px;padding:9px;text-align:center}
+.pp-cover .sub{letter-spacing:3px;font-size:10px;color:#e8c877}
+.pp-cover .ttl{font-size:23px;font-weight:700;color:#f1d489}
+.pp-cover svg{display:block;margin:0 auto 1px}
+.pp-body{position:relative;padding:14px 15px 18px;background:#f4ead0;background-image:linear-gradient(#e8d9b6 1px,transparent 1px),linear-gradient(90deg,#e8d9b6 1px,transparent 1px);background-size:24px 24px}
+.pp-guru{display:flex;align-items:flex-start;gap:9px;margin-bottom:6px}
+.pp-bubble{position:relative;background:#faf3df;border:1.5px solid #d9c79a;border-radius:12px;padding:7px 10px;font-size:12.5px;color:#5b4a2e;line-height:1.35;font-family:Georgia,serif}
+.pp-bubble:before{content:'';position:absolute;left:-7px;top:13px;width:11px;height:11px;background:#faf3df;border-left:1.5px solid #d9c79a;border-bottom:1.5px solid #d9c79a;transform:rotate(45deg)}
+.pp-lab{font-size:10px;letter-spacing:2px;color:#8a7044;font-weight:700;margin:14px 0 6px}
+.profs{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.prof{border:1.5px solid #c2ad82;background:#faf3df;color:#4a3b25;border-radius:18px;padding:6px 13px;font-size:14px;font-family:Georgia,serif;cursor:pointer;display:flex;align-items:center;gap:6px}
+.prof.sel{background:#e8c877;color:#4a3b25;border-color:#c79a3b}
+.prof .pc{font-size:11px;opacity:.85}
+.prof.add{border-style:dashed;color:#8a5a2b}
+#home input.name{background:#faf3df;border:1.5px solid #c2ad82;border-radius:10px;color:#4a3b25;font-family:Georgia,serif;font-style:italic}
+#home .chips{display:flex;flex-wrap:wrap;gap:8px}
+#home #datasets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+#home .chip{border:1.5px solid #c2ad82;background:#faf3df;color:#4a3b25;font-family:Georgia,serif;border-radius:8px;font-size:14px}
+#home .chip.sel{background:#f3e7c4;border-style:solid;font-weight:700}
+#home #datasets .chip.sel{box-shadow:0 3px 8px rgba(0,0,0,.16);transform:translateY(-2px)}
+#home #datasets .chip.sel::after{content:"✓";position:absolute;top:3px;right:7px;font-size:12px;font-weight:700}
+#home .chip.off{opacity:.5;background:#efe5cc}
+#home #datasets .chip{display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 4px 7px;border-style:dashed;font-weight:700;position:relative;transition:transform .12s,box-shadow .12s}
+#home .lvlnote{font-size:12px;color:#7a6647;margin-top:6px}
+#home .guide{display:none}
+#home .guide.ready{color:#1f5a4c;background:#eaf3ee;border-color:#bcd9ce}
+#home .actions{display:flex;gap:10px;margin-top:14px}
+#home .big{flex:1;border-radius:8px;padding:12px;font-size:15px;font-weight:700;font-family:Georgia,serif;border:1.5px solid;cursor:pointer}
+#home .big.learn{background:#2f6f5a;color:#f1e6c8;border-color:#1f4a3c}
+#home .big.play{background:#8c3b2b;color:#f1e6c8;border-color:#5f2419}
+#home .big.play:disabled{opacity:.4;cursor:default}
+.pp-ldr{border-top:1px solid #d9c79a;margin-top:16px;padding-top:12px}
+#home .btn.ghost{background:#15314f;color:#e8c877;font-family:Georgia,serif;border-radius:9px}
+.pp-shelf{display:flex;padding:7px 0 8px}
+.pp-shelf .stamp{width:50px;flex:0 0 auto;margin-left:-28px;transition:margin .25s,transform .15s;position:relative}
+.pp-shelf .stamp:first-child{margin-left:0}
+.pp-shelf:hover .stamp{margin-left:-12px}
+.pp-shelf .stamp:hover{transform:translateY(-9px);z-index:6}
+.stamp-paper{width:50px;height:58px;box-sizing:border-box;padding:5px;background:#f7eed6;-webkit-mask:radial-gradient(circle 2.5px,#000 96%,#0000) -1px -1px/8px 8px round,linear-gradient(#000 0 0) center/calc(100% - 10px) calc(100% - 10px) no-repeat;mask:radial-gradient(circle 2.5px,#000 96%,#0000) -1px -1px/8px 8px round,linear-gradient(#000 0 0) center/calc(100% - 10px) calc(100% - 10px) no-repeat;-webkit-mask-repeat:round,no-repeat;mask-repeat:round,no-repeat;filter:drop-shadow(0 1px 1px rgba(0,0,0,.28))}
+.stamp-in{width:100%;height:100%;box-sizing:border-box;border:1.5px solid var(--c);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:var(--c)}
+.stamp-in.lock{color:#b6a684;border-color:#cdbd95;border-style:dashed}
+.stamp-name{font-size:6.5px;font-weight:700;font-family:Georgia,serif;letter-spacing:.3px}
+.stamp-lm{width:26px;height:27px;display:block}
+.stamp .pmark{position:absolute;top:-3px;left:0;width:15px;height:15px;border-radius:50%;font-size:9px;display:flex;align-items:center;justify-content:center;background:#f7eed6;z-index:3;transform:rotate(-12deg);border:1.5px solid;font-family:Georgia,serif}
+.stamp .pmark.leg{color:#b88a1e;border-color:#b88a1e}
+.stamp .pmark.mas{color:#2f7d6b;border-color:#2f7d6b}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#efe2c4}
+::-webkit-scrollbar-thumb{background:#c2ad82;border-radius:6px;border:2px solid #efe2c4}
+::-webkit-scrollbar-thumb:hover{background:#ab9461}
+*{scrollbar-color:#c2ad82 #efe2c4;scrollbar-width:thin}
+/* ----- other screens: parchment, no white ----- */
+.clue{background:#faf3df;border:1px solid #d9c79a;color:#3a2f1d}
+.info{background:#faf3df;border:1px solid #d9c79a;color:#43372a}
+.info .ans input{background:#faf3df;border:1px solid #c2ad82;color:#3a2f1d}
+.info .iq{background:#efe2c4;border-color:#d9c79a;color:#3a2f1d}
+.info .ansbtn{background:#2f6f5a}
+.info .opt{background:#15314f;border:1.5px solid #0e2438;color:#f1e6c8;box-shadow:0 2px 0 #0d2030}
+.info .opt:hover{background:#23507c}
+.info .carodesc{color:#43372a}
+.info .carocap{color:#6b5a3c}
+.caroframe{background:#efe5cc}
+#end,#board{background:#f4ead0;color:#4a3b25}
+#end>div,#board>div{color:#4a3b25}
+#end h2,#board h2{color:#15314f}
+th{color:#8a7044}
+td,th{border-bottom:1px solid #e0d3b0}
+tr.me td{background:#faf3df}
+.nav{background:#15314f;color:#e8c877}
+.nav.next{background:#15314f;color:#e8c877}
+.nav:disabled{opacity:.4}
+.nav.wide{font-weight:700}
+.btn.ghost{background:#15314f;color:#e8c877;font-weight:600}
+.btn.go{background:#8c3b2b;color:#f1e6c8}
+#lplay{background:#2f6f5a;color:#f1e6c8}
+input.name{background:#faf3df}
+</style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="guru" viewBox="0 0 80 80"><defs><clipPath id="guruclip"><circle cx="40" cy="40" r="35"/></clipPath></defs>
+  <circle cx="40" cy="40" r="37" fill="#e7ddc2" stroke="#c79a3b" stroke-width="3"/>
+  <g clip-path="url(#guruclip)">
+    <path d="M10 80 Q12 60 28 56 L52 56 Q68 60 70 80 Z" fill="#5a7a49"/>
+    <path d="M34 56 L40 64 L46 56 L44 54 L40 60 L36 54 Z" fill="#46603a"/>
+    <circle cx="40" cy="72" r="1.6" fill="#46603a"/>
+    <rect x="35" y="49" width="10" height="11" fill="#e0b07f"/>
+    <ellipse cx="40" cy="42" rx="14" ry="16" fill="#e8bd8f"/>
+    <circle cx="26.5" cy="43" r="2.4" fill="#e8bd8f"/><circle cx="53.5" cy="43" r="2.4" fill="#e8bd8f"/>
+    <path d="M26 43 Q26 66 40 70 Q54 66 54 43 Q54 56 40 58 Q26 56 26 43 Z" fill="#efe9da"/>
+    <path d="M30 48 Q40 64 50 48 Q50 57 40 73 Q30 57 30 48 Z" fill="#efe9da"/>
+    <path d="M40 42 L38 48 L42 48 Z" fill="#d89f70"/>
+    <path d="M32 47 Q40 52 48 47" stroke="#d9d2bf" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g stroke="#3a2f1d" stroke-width="2" fill="#fbf7ec"><circle cx="33" cy="40" r="5.5"/><circle cx="47" cy="40" r="5.5"/></g>
+    <path d="M38.5 40h3" stroke="#3a2f1d" stroke-width="2"/>
+    <circle cx="33" cy="40" r="2.2" fill="#2a2018"/><circle cx="47" cy="40" r="2.2" fill="#2a2018"/>
+    <path d="M28 33 Q33 31 38 33" stroke="#9a8a6a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M42 33 Q47 31 52 33" stroke="#9a8a6a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="40" cy="25" rx="29" ry="6.5" fill="#43603a"/>
+    <path d="M24 26 Q24 8 40 8 Q56 8 56 26 Q40 20 24 26 Z" fill="#557a47"/>
+    <path d="M24 25 Q40 20 56 25 L56 28 Q40 23 24 28 Z" fill="#3a5230"/>
+    <path d="M51 23 Q60 14 58 4 Q53 13 47 20 Z" fill="#b6452f"/>
+  </g></symbol><symbol id="lm-eiffel" viewBox="0 0 40 44"><path d="M19 4 h2 l1 8 5 28 h-4 l-1.5-7 h-3 L17 40 h-4 l5-28 z" fill="currentColor"/><rect x="15" y="24" width="10" height="2" fill="currentColor"/></symbol><symbol id="lm-pagoda" viewBox="0 0 40 44"><path d="M8 17 L20 9 L32 17 Z" fill="currentColor"/><path d="M10 25 L20 18 L30 25 Z" fill="currentColor"/><path d="M12 33 L20 27 L28 33 Z" fill="currentColor"/><rect x="17" y="33" width="6" height="7" fill="currentColor"/></symbol><symbol id="lm-pyramid" viewBox="0 0 40 44"><circle cx="31" cy="12" r="4" fill="currentColor"/><path d="M4 34 L15 16 L26 34 Z" fill="currentColor"/><path d="M19 34 L28 20 L37 34 Z" fill="currentColor"/></symbol><symbol id="lm-christ" viewBox="0 0 40 44"><path d="M7 39 L20 22 L33 39 Z" fill="currentColor"/><circle cx="20" cy="9" r="2.4" fill="currentColor"/><rect x="18.8" y="11" width="2.4" height="15" fill="currentColor"/><rect x="11" y="14" width="18" height="2.4" fill="currentColor"/></symbol><symbol id="lm-mountain" viewBox="0 0 40 44"><path d="M3 36 L13 17 L20 27 L27 13 L37 36 Z" fill="currentColor"/></symbol><symbol id="lm-opera" viewBox="0 0 40 44"><rect x="4" y="33" width="32" height="3" fill="currentColor"/><path d="M6 34 Q9 18 15 34 Z" fill="currentColor"/><path d="M13 34 Q17 15 23 34 Z" fill="currentColor"/><path d="M21 34 Q26 19 31 34 Z" fill="currentColor"/></symbol><symbol id="lm-globe" viewBox="0 0 40 44"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M6 20h28M20 6c7 5 7 23 0 28M20 6c-7 5-7 23 0 28" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="18.6" y="34" width="2.8" height="6" fill="currentColor"/></symbol><symbol id="lm-liberty" viewBox="0 0 40 44"><path d="M16 40 L17 22 L23 22 L24 40 Z" fill="currentColor"/><circle cx="20" cy="16" r="3" fill="currentColor"/><path d="M15.5 13.5 l1-4 1 3 1.2-4 1 4 1.1-3 1 4 z" fill="currentColor"/><rect x="23" y="9" width="2.2" height="11" transform="rotate(20 24 14)" fill="currentColor"/><circle cx="27.5" cy="8" r="2.3" fill="currentColor"/></symbol><symbol id="lm-taj" viewBox="0 0 40 44"><rect x="6" y="34" width="28" height="3" fill="currentColor"/><rect x="9" y="15" width="2.4" height="19" fill="currentColor"/><rect x="28.6" y="15" width="2.4" height="19" fill="currentColor"/><path d="M14 34 Q14 20 20 16 Q26 20 26 34 Z" fill="currentColor"/><path d="M20 11 L18.4 16 L21.6 16 Z" fill="currentColor"/></symbol></svg>
 <div id="app">
   <div class="bar"><h1 id="ttl">Geo Tap</h1><div class="sc" id="score"></div></div>
 
   <div class="screen" id="home">
-    <div class="lead">Read each clue, then type the answer for 5 points — or find it on the map (4, then 3, then 2). Learn first, then play. 3 tries per clue.</div>
-    <label class="f">Type your name</label>
-    <input class="name" id="nameIn" placeholder="Type your name" maxlength="16">
-    <div id="dsWrap" style="display:none"><label class="f">Step 1 — Choose a Map set</label><div class="chips" id="datasets"></div></div>
-    <div id="lvlWrap" style="display:none"><label class="f">Step 2 — Choose a Level</label><div class="chips" id="levels"></div><div class="lvlnote" id="lvlnote"></div></div>
-    <div id="regWrap" style="display:none"><label class="f">Step 3 — Choose a Region</label><div class="chips" id="regions"></div></div>
-    <div id="actWrap" style="display:none">
-      <div class="guide" id="guide"></div>
-      <div class="actions">
-        <button class="big learn" id="learnBtn">① Learn first</button>
-        <button class="big play" id="playBtn" style="display:none">② Play</button>
+    <div class="pp-cover"><div class="frame"><svg viewBox="0 0 60 60" width="30" height="30" aria-hidden="true"><circle cx="30" cy="30" r="24" fill="none" stroke="#e8c877" stroke-width="1.5"/><path d="M30 8 L34 30 L30 52 L26 30 Z" fill="#e8c877"/><path d="M8 30 L30 34 L52 30 L30 26 Z" fill="#b9892b"/></svg><div class="sub">EXPLORER&#39;S PASSPORT</div><div class="ttl">Geo Tap</div></div></div>
+    <div class="pp-body">
+      <div class="pp-guru">
+        <svg viewBox="0 0 80 80" width="44" height="44" style="flex-shrink:0" aria-hidden="true"><use href="#guru"></use></svg>
+        <div class="pp-bubble" id="guruMsg">Hi Explorer! I&#39;m <b style="color:#15314f">Geo Guru</b>. Where would you like to roam today?</div>
+      </div>
+      <div class="pp-lab" id="profLab">WHOSE PASSPORT?</div>
+      <div class="profs" id="profRow"></div>
+      <input class="name" id="nameIn" placeholder="Type your name" maxlength="16" style="display:none;margin-top:8px;width:100%;box-sizing:border-box;padding:11px 14px;font-size:16px"><button class="big learn" id="nameGo" style="display:none;margin-top:8px;width:100%">Start exploring</button>
+      <div id="dsWrap" style="display:none"><div class="pp-lab">CHOOSE YOUR DESTINATION</div><div class="chips" id="datasets"></div></div>
+      <div id="lvlWrap" style="display:none"><div class="pp-lab">CHOOSE A LEVEL</div><div class="chips" id="levels"></div><div class="lvlnote" id="lvlnote"></div></div>
+      <div id="regWrap" style="display:none"><div class="pp-lab">CHOOSE A REGION</div><div class="chips" id="regions"></div></div>
+      <div id="actWrap" style="display:none">
+        <div class="guide" id="guide"></div>
+        <div class="actions">
+          <button class="big learn" id="learnBtn">Explore first</button>
+          <button class="big play" id="playBtn" disabled>Play</button>
+        </div>
+      </div>
+      <div class="pp-ldr" id="ldrWrap" style="display:none">
+        <div class="pp-lab" style="display:flex;justify-content:space-between;align-items:center">STAMPS COLLECTED<span id="stampSummary" style="letter-spacing:0;color:#8c3b2b;font-size:11px"></span></div>
+        <div class="pp-shelf" id="stampShelf"></div>
+        <button class="btn ghost" id="boardBtn" style="margin-top:6px;width:100%">Hall of Explorers</button>
       </div>
     </div>
-    <button class="btn ghost" id="boardBtn" style="margin-top:14px;width:100%">View leaderboard</button>
   </div>
 
   <div class="screen" id="learn">
@@ -172,13 +291,13 @@ let player="",dataset="",level="",region="",autoFocus=false;
 let round=[],queue=[],pos=0,frontier=0,score=0,baseVB=null,vb=null,mode="game",origBase=null,curContKey=null;
 function esc(s){return (s+'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function wl(name){const t=name.replace(/\s*\(.*?\)/g,'').replace(/^the\s+/i,'').trim();return '<a class="wl" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/'+encodeURIComponent(t.replace(/ /g,'_'))+'" data-t="'+t.replace(/"/g,'&quot;')+'">'+esc(name)+'</a>';}
-function show(n){['home','learn','game','end','board'].forEach(s=>$(s).style.display=(s===n?'flex':'none'));if(n!=='learn'&&n!=='game')hideInfo();if(n==='home')refreshActions();}
+function show(n){['home','learn','game','end','board'].forEach(s=>$(s).style.display=(s===n?'flex':'none'));if(n!=='learn'&&n!=='game')hideInfo();if(n==='home'){renderProfiles();refreshActions();renderStamps();}}
 
 /* ---------- HOME ---------- */
 $('nameIn').addEventListener('input',e=>{player=e.target.value.trim();refreshActions();});
 const DS=[["World","Landmarks by City (World)",true],["US","Landmarks by City (US)",true],["India","Landmarks by City (India)",true]];
 const dsBox=$('datasets');
-DS.forEach(([k,lab,on])=>{const b=document.createElement('div');b.className='chip'+(on?'':' off');b.textContent=lab+(on?'':'  ·  soon');if(on)b.onclick=()=>selDataset(k,b);dsBox.appendChild(b);});
+var DSMETA={World:{n:'World',lm:'globe',c:'#2f7d6b'},US:{n:'USA',lm:'liberty',c:'#8c3b2b'},India:{n:'India',lm:'taj',c:'#b07a1e'}};DS.forEach(([k,lab,on])=>{const b=document.createElement('div');b.className='chip'+(on?'':' off');var m=DSMETA[k]||{n:k,lm:'globe',c:'#4a3b25'};b.innerHTML='<svg viewBox="0 0 40 44" width="24" height="26" style="display:block;color:'+m.c+'"><use href="#lm-'+m.lm+'"></use></svg>'+m.n+(on?'':'<div style="font-size:9px;font-weight:400">soon</div>');b.style.borderColor=m.c;b.style.color=m.c;if(on)b.onclick=()=>selDataset(k,b);dsBox.appendChild(b);});
 function selDataset(k,el){dataset=k;level="";region="";[...dsBox.children].forEach(c=>c.classList.toggle('sel',c===el));
   if(k==='World'){renderLevels();renderRegions();$('lvlnote').textContent='';}
   else{level='All';region=k;}
@@ -191,7 +310,7 @@ function loadLearned(){try{return new Set(JSON.parse(localStorage.getItem('geota
 function hasLearned(k){return loadLearned().has(k)||LMEM.has(k);}
 function markLearned(k){LMEM.add(k);try{const s=loadLearned();s.add(k);localStorage.setItem('geotap_learned',JSON.stringify([...s]));}catch(e){}}
 function refreshActions(){
-  const np=!!player;
+  const np=!!curProfile();
   $('dsWrap').style.display=np?'block':'none';
   const worldChosen=np&&dataset==='World';
   $('lvlWrap').style.display=worldChosen?'block':'none';
@@ -199,14 +318,14 @@ function refreshActions(){
   const ok=np&&dataset&&(dataset!=='World'||(level&&region));
   const learned=ok&&hasLearned(topicKey());
   $('actWrap').style.display=ok?'block':'none';
-  $('playBtn').style.display=learned?'':'none';
+  $('playBtn').disabled=!learned;var _lw=$('ldrWrap');if(_lw)_lw.style.display=np?'block':'none';
   const g=$('guide');if(g){
-    if(!learned){g.textContent='Tap “① Learn first” to explore these places. “② Play” appears once you’ve been through Learn.';g.classList.remove('ready');}
-    else{g.textContent='Ready! Tap Learn to review again, or ② Play to start the quiz.';g.classList.add('ready');}
+    if(!learned){g.textContent='Tap “Explore first” to explore these places. “Play” appears once you’ve been through Learn.';g.classList.remove('ready');}
+    else{g.textContent='Ready! Tap Learn to review again, or Play to start the quiz.';g.classList.add('ready');}
   }
 }
-$('learnBtn').onclick=()=>{prep();startLearn();};
-$('playBtn').onclick=()=>{prep();startGame();};
+$('learnBtn').onclick=()=>{ensureProfile();prep();startLearn();};
+$('playBtn').onclick=()=>{ensureProfile();prep();startGame();};
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];}return a;}
 function rFor(sv){const w=parseFloat((sv.getAttribute('viewBox')||'0 0 1000 500').split(' ')[2]);return w*PINK;}
@@ -549,7 +668,7 @@ function finish(){
   const total=queue.length,maxScore=total*5,solved=round.filter(it=>it.state==='solved').length;
   const setName=(dataset==='World')?('World '+level+' '+region):dataset;
   const ratio=maxScore?score/maxScore:0,stars=ratio>=0.8?3:ratio>=0.5?2:1;
-  const rec={name:player,set:setName,score:score,max:maxScore,t:Date.now()};putScore(rec);
+  const rec={name:player,set:setName,score:score,max:maxScore,t:Date.now()};putScore(rec);var _sk=(dataset==='World')?(region==='All'?'World':region):dataset;awardStamp(_sk,ratio,score);
   $('stars').textContent='★'.repeat(stars)+'☆'.repeat(3-stars);
   $('endScore').textContent=score+' / '+maxScore;$('endTitle').textContent=player+' found '+solved+' of '+total+'!';
   const rows=getScores().filter(r=>r.set===setName).sort((a,b)=>b.score-a.score||a.t-b.t).slice(0,10);
@@ -595,6 +714,43 @@ wrap.addEventListener('pointerup',up);wrap.addEventListener('pointercancel',up);
 })();
 
 show('home');
+
+/* ---------- Explorer's Passport: profiles + stamps ---------- */
+var DESTS=[{k:'Europe',n:'EUROPE',lm:'eiffel',col:'#b03a4a'},{k:'Asia',n:'ASIA',lm:'pagoda',col:'#2f7d6b'},{k:'Africa',n:'AFRICA',lm:'pyramid',col:'#b9772a'},{k:'North America',n:'N.AMER',lm:'mountain',col:'#3a6ea5'},{k:'South America',n:'S.AMER',lm:'christ',col:'#5a8c3a'},{k:'Oceania',n:'OCEANIA',lm:'opera',col:'#7a4ea0'},{k:'World',n:'WORLD',lm:'globe',col:'#2b4a63'},{k:'US',n:'USA',lm:'liberty',col:'#b5462f'},{k:'India',n:'INDIA',lm:'taj',col:'#c98a1e'}];
+var TIER_NAME=['','Visited','Explorer','Adventurer','Master','Legendary'];
+var TIER_COL=['','#a9743a','#8d9aa0','#c79a3b','#2f7d6b','#3f93a8'];
+var _changing=false,_cur=null,_profs=null;
+function stampTier(r){return r>=1?5:r>=0.9?4:r>=0.75?3:r>=0.5?2:1;}
+function curProfile(){if(_cur===null){try{_cur=localStorage.getItem('geotap_current')||'';}catch(e){_cur='';}}return _cur;}
+function getProfiles(){if(_profs===null){try{_profs=JSON.parse(localStorage.getItem('geotap_profiles')||'[]');}catch(e){_profs=[];}}return _profs;}
+function saveProfiles(a){_profs=a;try{localStorage.setItem('geotap_profiles',JSON.stringify(a));}catch(e){}}
+function setProfile(n){_cur=n;try{localStorage.setItem('geotap_current',n);}catch(e){}player=n;}
+function addProfile(n){n=(n||'').trim();if(!n)return;var a=getProfiles().slice();if(a.indexOf(n)<0){a.push(n);saveProfiles(a);}setProfile(n);}
+function awardStamp(){}
+function destKeyFromSet(set){if(!set)return '';if(set.indexOf('World ')===0){var r=set.split(' ').slice(2).join(' ');return r==='All'?'World':r;}return set;}
+function profileStamps(name){var best={};if(!name)return best;try{getScores().forEach(function(r){if(!r||r.name!==name)return;var k=destKeyFromSet(r.set);if(!k)return;var ratio=r.max?r.score/r.max:0;var ti=stampTier(ratio);var c=best[k];if(!c||ti>c.tier||r.score>c.best){best[k]={tier:Math.max(ti,c?c.tier:0),best:Math.max(r.score,c?c.best:0)};}});}catch(e){}return best;}
+function stampCount(n){return Object.keys(profileStamps(n)).length;}
+function setGreet(html){var g=document.getElementById('guruMsg');if(g)g.innerHTML=html;}
+function ensureProfile(){var inp=document.getElementById('nameIn');if(inp&&inp.style.display!=='none'&&inp.value.trim()){addProfile(inp.value.trim());}else if(!curProfile()&&player&&player.trim()){addProfile(player.trim());}}
+function bindProfRow(){var host=document.getElementById('profRow');if(!host)return;[].forEach.call(host.querySelectorAll('.prof'),function(el){el.onclick=function(){var inp=document.getElementById('nameIn');if(el.getAttribute('data-add')){_changing=false;_cur='';if(document.getElementById('profLab'))document.getElementById('profLab').style.display='none';host.innerHTML='';setGreet('What name should I write in this passport?');if(inp){inp.style.display='block';inp.value='';inp.focus();}var go=document.getElementById('nameGo');if(go)go.style.display='block';player='';refreshAll();}else if(el.getAttribute('data-change')){_changing=true;renderProfiles();refreshActions();}else{_changing=false;setProfile(el.getAttribute('data-n'));renderAfterSelect();}};});}
+function renderProfiles(){if(typeof getProfiles!=='function')return;var host=document.getElementById('profRow');if(!host)return;var lab=document.getElementById('profLab');var inp=document.getElementById('nameIn');var go=document.getElementById('nameGo');if(go)go.style.display='none';var a=getProfiles();var cur=curProfile();if(cur&&a.indexOf(cur)>=0)player=cur;
+  if(cur&&!_changing){setGreet('Hi <b style="color:#15314f">'+esc(cur)+'</b>, this is <b style="color:#15314f">Geo Guru</b>.'+lastActivity()+' Where would you like to roam today?');if(lab)lab.style.display='none';host.innerHTML='<span style="font-size:13px;color:#5b4a2e;font-family:Georgia,serif">Exploring as <b>'+esc(cur)+'</b></span> <span class="prof" data-change="1" style="padding:4px 11px;font-size:12px">change</span>';if(inp)inp.style.display='none';}
+  else if(_changing){setGreet('Pick a passport, or start a new one.');if(lab){lab.style.display='';lab.textContent='WHOSE PASSPORT?';}var h='';a.forEach(function(n){h+='<div class="prof'+(n===cur?' sel':'')+'" data-n="'+n.replace(/"/g,'&quot;')+'">'+esc(n)+' <span class="pc">'+stampCount(n)+'\u2726</span></div>';});h+='<div class="prof add" data-add="1">+ New</div>';host.innerHTML=h;if(inp)inp.style.display='none';}
+  else{setGreet('Greetings, explorer! I\'m <b style="color:#15314f">Geo Guru</b>, your trusty guide. What should I call you?');if(lab)lab.style.display='none';host.innerHTML='';if(inp)inp.style.display='block';if(go)go.style.display='block';}
+  bindProfRow();}
+function prettySet(x){if(x&&x.indexOf('World ')===0){var p=x.split(' ');return p.slice(2).join(' ')+' ('+p[1]+')';}return x;}
+function lastActivity(){var nm=curProfile();if(!nm)return '';var b=null;try{getScores().forEach(function(r){if(r&&r.name===nm&&(!b||r.t>b.t))b=r;});}catch(e){}if(!b)return '';return ' Last visit you scored '+b.score+'/'+b.max+' on '+prettySet(b.set)+'.';}
+function stampGo(k){if(!k||!curProfile())return;var ds,lv,rg;if(k==='US'||k==='India'){ds=k;lv='All';rg=k;}else{ds='World';rg=(k==='World')?'All':k;lv=hasLearned('World|Medium|'+rg)?'Medium':'Easy';}dataset=ds;level=lv;region=rg;autoFocus=(ds==='World'&&rg==='All');try{prep();if(hasLearned(topicKey()))startGame();else startLearn();}catch(e){}}
+function renderStamps(){if(typeof DESTS==='undefined'||!DESTS||!DESTS.forEach)return;var host=document.getElementById('stampShelf');if(!host)return;var s=profileStamps(curProfile());var rare=0;var h='';DESTS.forEach(function(d){var e=s[d.k];if(e&&e.tier){if(e.tier>=4)rare++;var pm=e.tier===5?'<span class="pmark leg">✦</span>':(e.tier===4?'<span class="pmark mas">★</span>':'');h+='<div class="stamp" data-k="'+d.k+'" title="'+d.n+': '+TIER_NAME[e.tier]+' · best '+e.best+'">'+pm+'<div class="stamp-paper"><div class="stamp-in" style="--c:'+d.col+'"><div class="stamp-name">'+d.n+'</div><svg class="stamp-lm" viewBox="0 0 40 44"><use href="#lm-'+d.lm+'"></use></svg></div></div></div>';}else{h+='<div class="stamp" data-k="'+d.k+'" title="'+d.n+': tap to start"><div class="stamp-paper"><div class="stamp-in lock"><div class="stamp-name">'+d.n+'</div><svg class="stamp-lm" viewBox="0 0 40 44"><use href="#lm-'+d.lm+'"></use></svg></div></div></div>';}});host.innerHTML=h;[].forEach.call(host.querySelectorAll('.stamp'),function(el){el.style.cursor='pointer';el.onclick=function(){stampGo(el.getAttribute('data-k'));};});var sum=document.getElementById('stampSummary');if(sum)sum.textContent=rare?('✦ '+rare+' rare · hover to fan'):'';}
+function refreshAll(){renderStamps();try{refreshActions();}catch(e){}}
+function renderAfterSelect(){var inp=document.getElementById('nameIn');if(inp)inp.style.display='none';var go=document.getElementById('nameGo');if(go)go.style.display='none';renderProfiles();renderStamps();try{refreshActions();}catch(e){}var ds=document.getElementById('dsWrap');if(ds)ds.style.display='block';var lw=document.getElementById('ldrWrap');if(lw)lw.style.display='block';}
+(function(){
+  var inp=document.getElementById('nameIn');
+  function commit(){if(!inp)return;var v=inp.value.trim();if(!v)return;_changing=false;addProfile(v);renderAfterSelect();}
+  if(inp){inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();commit();}});inp.addEventListener('blur',function(){if(inp.value.trim()&&!curProfile())commit();});}
+  var go=document.getElementById('nameGo');if(go)go.addEventListener('click',function(e){e.preventDefault();commit();});
+  try{var c=curProfile();if(c)player=c;renderProfiles();renderStamps();refreshActions();}catch(e){}
+})();
 </script>
 </body>
 </html>
